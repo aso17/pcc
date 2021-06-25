@@ -74,7 +74,9 @@
                         <h6 class="collapse-header">Menu:</h6>
 
                         <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Planing</a>
-                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar proses</a>
+                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar Proses</a>
+                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar kategori</a>
+                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar Material</a>
                     </div>
                 </div>
             </li>
@@ -85,7 +87,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Planing
+                Proses
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -93,13 +95,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-align-justify"></i>
-                    <span>Transaksi</span>
+                    <span>Proses Planing</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('pelangkar') ?>">Pelanggaran Karyawan</a>
-                        <a class="collapse-item" href="<?php echo base_url('pelangvis') ?>">Pelanggaran Visitor</a>
+                        <a class="collapse-item" href="<?php echo base_url('pelangkar') ?>">Dafatar Spb</a>
+                        <a class="collapse-item" href="<?php echo base_url('pelangvis') ?>">Daftar Proses</a>
                     </div>
                 </div>
             </li>
