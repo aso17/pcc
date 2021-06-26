@@ -57,13 +57,8 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <p class="page2">Visi PT. Adis Dimension footwear</p>
-                            <p class="page1">1.</p>
-                            <p class="page1">1.</p>
-                            <p class="page1">1.</p>
-                            <p class="page1">1.</p>
-                            <p class="page1">1.</p>
-                            <p class="page1">1.</p>
-
+                            <p class="page1">Menjadi perusahaan yang bereputasi tinggi dan berkelanjutan melalui investasi pada manusia serta pabrik yang canggih</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -93,12 +88,16 @@
                 <div class="modal-dialog modal-dialog-scrollable modal-lg">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <p class="page2">Visi PT. Adis Dimension footwear</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
+                            <p class="page2">Misi PT. Adis Dimension footwear</p>
+                            <p>1.Always work to create premium products.
+Senantiasa bekerja untuk menciptakan produk unggulan.</p>
+                            <p>2.Develop new ways of working, full integrity, more efficient, profitable.
+Mengembangkan cara baru dalam bekerja, penuh integritas, lebih efisien, menguntungkan.</p>
+                            <p>3.Invest in people for better future.
+Melakukan investasi pada manusia demi masa depan lebih baik.</p>
+                            <p>4.Social responsibility through Green Company.
+Tanggung jawab sosial melalui perusahaan ramah lingkungan.</p>
+                           
 
                         </div>
                     </div>
@@ -129,12 +128,8 @@
                     <div class="modal-content">
                         <div class="modal-body">
                             <p class="page2">Moto PT. Adis Dimension footwear</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
-                            <p>1.</p>
+                            <p>ADIS NICE SUPER AGILE</p>
+                            
 
                         </div>
 
