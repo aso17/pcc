@@ -5,13 +5,4 @@ class Warehouse extends CI_Controller
     {
         $this->template->load('template/index', 'warehouse/index');
     }
-
-    public function material()
-    {
-        $this->template->load('template/index', 'warehouse/material/index');
-    }
-    public function approve()
-    {
-        $this->template->load('template/index', 'warehouse/spb');
-    }
 }
