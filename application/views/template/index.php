@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title> Dashboard</title>
+    <title>PCC</title>
 
 
     <!-- Custom styles for this template-->
@@ -58,7 +58,7 @@
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
-                Master Data
+                Planing
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
 
@@ -73,21 +73,19 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
 
-                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Planing</a>
-                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar Proses</a>
-                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar kategori</a>
-                        <a class="collapse-item" href="<?php echo base_url('') ?>">Daftar Material</a>
+                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Spk</a>
+                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Material</a>
+
+
                     </div>
                 </div>
             </li>
-
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Proses
+                Workshop
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -100,14 +98,33 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('pelangkar') ?>">Dafatar Spb</a>
-                        <a class="collapse-item" href="<?php echo base_url('pelangvis') ?>">Daftar Proses</a>
+                        <a class="collapse-item" href="<?php echo base_url('pelangkar') ?>">Proses</a>
+
                     </div>
                 </div>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>Daftar SPB</span></a>
+            </li>
 
-            <!-- Divider -->
+
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Wherehouse
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Warehouse') ?>">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>Approve</span></a>
+            </li>
+
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -124,9 +141,9 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('laporan/filter') ?>">Laporan Karyawan</a>
-                        <a class="collapse-item" href="<?php echo base_url('laporan_visitor/filter_lapvis') ?>">Laporan
-                            Visitor</a>
+                        <a class="collapse-item" href="<?php echo base_url('laporan/filter') ?>">Laporan Planing</a>
+                        <a class="collapse-item"
+                            href="<?php echo base_url('laporan_visitor/filter_lapvis') ?>">Pemakaian</a>
                     </div>
                 </div>
             </li>
@@ -229,27 +246,27 @@
 
                     <?= $contents ?>
 
-                    <!-- Footer -->
-                    <footer class="sticky-footer bg-white">
-                        <div class="container my-auto">
-                            <div class="copyright text-center my-auto">
-                                <span>Copyright &copy;A_so17</span>
-                            </div>
-                        </div>
-                    </footer>
-                    <!-- End of Footer -->
-
                 </div>
-                <!-- End of Content Wrapper -->
+
 
             </div>
+            <!-- End of Content Wrapper -->
+
             <!-- End of Page Wrapper -->
 
             <!-- Scroll to Top Button-->
             <a class="scroll-to-top rounded" href="#page-top">
                 <i class="fas fa-angle-up"></i>
             </a>
-
+            <!-- Footer -->
+            <!-- <footer class="fixed-footer bg-white mt-4">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy;A_so17</span>
+                    </div>
+                </div>
+            </footer> -->
+            <!-- End of Footer -->
             <!-- Logout Modal-->
             <div class="modal fade" id="logoutModal">
                 <div class="modal-dialog">

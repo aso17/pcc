@@ -13,7 +13,7 @@
     <link href=<?php echo base_url('assets/fontawesome-free/css/all.min.css') ?> rel="stylesheet" type="text/css">
 
     <!-- Custom styles for this template-->
-    <link href="<?php echo base_url('css/sb-admin-2.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('/assets/css/sb-admin-2.min.css') ?>" rel="stylesheet">
 
     <!-- toastr template-->
     <link href="<?php echo base_url('assets/toastr/toastr.min.css') ?>" rel="stylesheet" type="text/css">
@@ -74,7 +74,7 @@
 <script src="<?php echo base_url('assets/jquery-easing/jquery.easing.min.js') ?>"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<?php echo base_url('js/sb-admin-2.min.js') ?>"></script>
+<script src="<?php echo base_url('/assets/js/sb-admin-2.min.js') ?>"></script>
 
 <!-- toastr -->
 <script src="<?php echo base_url('assets/toastr/toastr.min.js') ?>"></script>

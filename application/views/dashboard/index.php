@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title><?= $judul; ?></title>
     <style type="text/css">
     .page1 {
         font-size: 16px;
