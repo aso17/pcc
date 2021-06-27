@@ -5,4 +5,8 @@ class Planing extends CI_Controller
     {
         $this->template->load('template/index', 'planing/index');
     }
+    public function create()
+    {
+        $this->template->load('template/index', 'planing/create');
+    }
 }

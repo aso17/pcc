@@ -114,7 +114,7 @@
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
-                Wherehouse
+                Warehouse
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
 

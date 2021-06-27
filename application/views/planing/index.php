@@ -9,7 +9,7 @@
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">DATA PLANING</h6>
-                <a href="<?php echo base_url('karyawan/add') ?>" class="btn btn-primary btn-icon-split">
+                <a href="<?php echo base_url('Planing/create') ?>" class="btn btn-primary btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus"></i>
                     </span>

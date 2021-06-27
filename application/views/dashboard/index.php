@@ -54,11 +54,14 @@
             <div class="modal fade" id="modal-ringan" tabindex="-1" data-bs-keyboard="false"
                 aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                    <div class="modal-content">
+                    <div class="modal-content bg-primary text-light">
                         <div class="modal-body">
-                            <p class="page2">Visi PT. Adis Dimension footwear</p>
-                            <p class="page1">Menjadi perusahaan yang bereputasi tinggi dan berkelanjutan melalui investasi pada manusia serta pabrik yang canggih</p>
-                            
+                            <h3 class="font-weight-bold">Visi PT. Adis Dimension footwear</h3>
+                            <p class="page1">Menjadi perusahaan yang bereputasi tinggi dan berkelanjutan melalui
+                            </p>
+                            <p> investasi pada manusia serta pabrik yang canggih </p>
+
+
                         </div>
                     </div>
                 </div>
@@ -87,17 +90,18 @@
             <div class="modal fade" id="modal-sedang" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-lg">
                     <div class="modal-content">
-                        <div class="modal-body">
-                            <p class="page2">Misi PT. Adis Dimension footwear</p>
+                        <div class="modal-body bg-primary text-light">
+                            <h3 class="font-weight-bold">Misi PT. Adis Dimension footwear</h3>
                             <p>1.Always work to create premium products.
-Senantiasa bekerja untuk menciptakan produk unggulan.</p>
-                            <p>2.Develop new ways of working, full integrity, more efficient, profitable.
-Mengembangkan cara baru dalam bekerja, penuh integritas, lebih efisien, menguntungkan.</p>
+                                Senantiasa <br> bekerja untuk menciptakan produk unggulan.</p>
+                            <p>2.Develop new ways of working, full integrity, more efficient, profitable.<br>
+                                Mengembangkan cara baru dalam bekerja, penuh integritas, lebih efisien, menguntungkan.
+                            </p>
                             <p>3.Invest in people for better future.
-Melakukan investasi pada manusia demi masa depan lebih baik.</p>
+                                Melakukan investasi pada manusia demi masa depan lebih baik.</p>
                             <p>4.Social responsibility through Green Company.
-Tanggung jawab sosial melalui perusahaan ramah lingkungan.</p>
-                           
+                                Tanggung jawab sosial melalui perusahaan ramah lingkungan.</p>
+
 
                         </div>
                     </div>
@@ -125,11 +129,11 @@ Tanggung jawab sosial melalui perusahaan ramah lingkungan.</p>
             <!-- Modal Sedang -->
             <div class="modal fade" id="modal-berat" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog  modal-dialog-scrollable modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <p class="page2">Moto PT. Adis Dimension footwear</p>
+                    <div class="modal-content ">
+                        <div class="modal-body bg-primary text-light">
+                            <h3 class="font-weight-bold">Moto PT. Adis Dimension footwear</h3>
                             <p>ADIS NICE SUPER AGILE</p>
-                            
+
 
                         </div>
 
