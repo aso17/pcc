@@ -34,10 +34,10 @@
                             </tr>
                         </thead>
                         <tbody>
-
+                            <?php $i = 1; ?>
                             <?php foreach ($spk as $sp) : ?>
                             <tr>
-                                <td class="text-center"></td>
+                                <td class="text-center"><?= $i++ ?></td>
                                 <td class="text-center"><?= $sp->bom_id ?></td>
                                 <td class="text-center"><?= $sp->kategori ?></td>
                                 <td class="text-center"><?= $sp->type_sample ?></td>
@@ -46,6 +46,9 @@
                                 <td class="text-center"><?= $sp->code_product ?></td>
                                 <td class="text-center"><?= $sp->qty_product ?></td>
                                 <td class="text-center">
+                                    <a href="http://">
+                                        <button class="btn btn-secondary btn-sm "><i class="fas fa-eye"></i></button>
+                                    </a>
                                     <a href="http://">
                                         <button class="btn btn-success btn-sm "><i class="fas fa-edit"></i></button>
                                     </a>

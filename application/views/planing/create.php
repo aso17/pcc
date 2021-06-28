@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header">
@@ -93,7 +93,7 @@
 
                                     <?php foreach ($material as $m) : ?>
                                     <div class="col-md-2">
-                                        <label for="id_material">Pilih Jenis Material</label>
+                                        <label for="id_material">Jenis Material</label>
                                         <div class="form-group">
 
                                             <div class="input-group">
@@ -107,7 +107,7 @@
                                                 <input type="text"
                                                     class="form-control <?php echo form_error('material[]') ? 'is-invalid' : '' ?>"
                                                     aria-label="Text input with checkbox"
-                                                    value="<?= $m->nama_material ?>">
+                                                    value="<?= $m->nama_material ?>" readonly>
                                                 <div class="invalid-feedback">
                                                     <?php echo form_error('material[]') ?>
                                                 </div>
