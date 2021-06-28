@@ -24,7 +24,6 @@
                             <tr>
                                 <th class="text-center">No</th>
                                 <th class="text-center">BOM ID</th>
-                                <th class="text-center">Seasean</th>
                                 <th class="text-center">Kategori</th>
                                 <th class="text-center">Type Sample</th>
                                 <th class="text-center">Model Name</th>
@@ -36,17 +35,16 @@
                         </thead>
                         <tbody>
 
-
+                            <?php foreach ($spk as $sp) : ?>
                             <tr>
                                 <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
-                                <td class="text-center"></td>
+                                <td class="text-center"><?= $sp->bom_id ?></td>
+                                <td class="text-center"><?= $sp->kategori ?></td>
+                                <td class="text-center"><?= $sp->type_sample ?></td>
+                                <td class="text-center"><?= $sp->model_name ?></td>
+                                <td class="text-center"><?= $sp->size ?></td>
+                                <td class="text-center"><?= $sp->code_product ?></td>
+                                <td class="text-center"><?= $sp->qty_product ?></td>
                                 <td class="text-center">
                                     <a href="http://">
                                         <button class="btn btn-success btn-sm "><i class="fas fa-edit"></i></button>
@@ -59,7 +57,7 @@
                                         </span></a>
                                 </td>
                             </tr>
-
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>

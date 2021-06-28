@@ -31,11 +31,20 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="kategori">Kategori Sample</label>
-                                            <input type="text"
-                                                class="form-control <?php echo form_error('kategori') ? 'is-invalid' : '' ?>"
-                                                id="kategori" name="kategori">
+                                            <select name="kategori" id="kategori"
+                                                class="form-control custom-form <?= form_error('kategori') ? 'is-invalid' : '' ?>"
+                                                name="kategori">
+
+                                                <option selected hidden value="">-- Pilih Kategori --</option>
+                                                <option value="KIDS">KIDS</option>
+                                                <option value="MAN">MAN</option>
+                                                <option value="WMN">WMN</option>
+                                                <option value="TROUGHPUT">TROUGHPUT</option>
+
+
+                                            </select>
                                             <div class="invalid-feedback">
-                                                <?php echo form_error('kategori') ?>
+                                                <?php echo form_error('kategori'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -80,17 +89,32 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+
+
+                                    <?php foreach ($material as $m) : ?>
+                                    <div class="col-md-2">
+                                        <label for="id_material">Pilih Jenis Material</label>
                                         <div class="form-group">
-                                            <label for="id_material">Jenis Material</label>
-                                            <input type="text"
-                                                class="form-control <?php echo form_error('id_material') ? 'is-invalid' : '' ?>"
-                                                id="id_material" name="id_material">
-                                            <div class="invalid-feedback">
-                                                <?php echo form_error('id_material') ?>
+
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <input type="checkbox"
+                                                            aria-label="Checkbox for following text input"
+                                                            name="material[]" value="<?= $m->id_material ?>">
+                                                    </div>
+                                                </div>
+                                                <input type="text"
+                                                    class="form-control <?php echo form_error('material[]') ? 'is-invalid' : '' ?>"
+                                                    aria-label="Text input with checkbox"
+                                                    value="<?= $m->nama_material ?>">
+                                                <div class="invalid-feedback">
+                                                    <?php echo form_error('material[]') ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php endforeach; ?>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -103,6 +127,15 @@
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('type_sample') ?>
                                             </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="decription">Description</label>
+                                        <textarea type="text"
+                                            class="form-control <?php echo form_error('decription') ? 'is-invalid' : '' ?>"
+                                            id="decription" name="decription" autofocus cols="30" rows="1"></textarea>
+                                        <div class="invalid-feedback">
+                                            <?php echo form_error('decription') ?>
                                         </div>
                                     </div>
                                 </div>
