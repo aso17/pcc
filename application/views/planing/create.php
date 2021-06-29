@@ -165,7 +165,7 @@
 
                                     <div class="card-footer">
                                         <a href="<?php echo base_url('Planing') ?>"
-                                            class="btn btn-primary btn-icon-split btn-sm float-right"
+                                            class="btn btn-danger btn-icon-split btn-sm float-right"
                                             style="margin-bottom: 5px;"><span class="icon text-white-5">
                                                 <i class="fas fa-arrow-circle-left"></i></span>
                                             <span class="font-weight-bold text">Back</span></a>

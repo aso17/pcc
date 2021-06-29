@@ -46,7 +46,7 @@
                                 <td class="text-center"><?= $sp->code_product ?></td>
                                 <td class="text-center"><?= $sp->qty_product ?></td>
                                 <td class="text-center">
-                                    <a href="http://">
+                                    <a href="<?= base_url('Planing/show/') . $sp->id_spk ?>">
                                         <button class="btn btn-secondary btn-sm "><i class="fas fa-eye"></i></button>
                                     </a>
                                     <a href="http://">

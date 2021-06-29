@@ -13,6 +13,11 @@ class Planing extends CI_Controller
         $data['spk'] = $this->model_spk->GetAll();
         $this->template->load('template/index', 'planing/index', $data);
     }
+    public function material()
+    {
+        $data['material'] = $this->model_material->GetAll();
+        $this->template->load('template/index', 'planing/material', $data);
+    }
     public function create()
     {
         $data['material'] = $this->model_material->GetAll();
@@ -50,5 +55,11 @@ class Planing extends CI_Controller
             $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
             redirect('Planing', 'refresh');
         }
+    }
+    public function show($id_spk)
+    {
+        $data['spk'] = $this->model_spk->detail($id_spk);
+        $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
+        $this->template->load('template/index', 'planing/show', $data);
     }
 }

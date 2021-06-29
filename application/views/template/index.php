@@ -74,7 +74,7 @@
                         <h6 class="collapse-header">Menu:</h6>
 
                         <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Spk</a>
-                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Material</a>
+                        <a class="collapse-item" href="<?php echo base_url('Planing/material') ?>">Daftar Material</a>
 
 
                     </div>
