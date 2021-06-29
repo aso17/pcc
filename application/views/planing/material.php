@@ -8,13 +8,13 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">DATA Material</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Data Material</h6>
 
             </div>
 
             <div class="card-body">
                 <div class="table table-responsive">
-                    <table class="table table-sm" id="tabel" cellspacing="0">
+                    <table class="table table-sm" id="tabel" cellspacing="0" border="1">
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 5%;">No</th>
@@ -41,6 +41,8 @@
                     </table>
                 </div>
             </div>
+
+
         </div>
 
     </div>

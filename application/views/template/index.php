@@ -93,12 +93,12 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-align-justify"></i>
-                    <span>Proses Planing</span>
+                    <span>SPB</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('pelangkar') ?>">Proses</a>
+                        <a class="collapse-item" href="<?php echo base_url('Spb') ?>">Daftar spb</a>
 
                     </div>
                 </div>
@@ -107,7 +107,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-align-justify"></i>
-                    <span>Daftar SPB</span></a>
+                    <span>Proses Planing</span></a>
             </li>
 
 
