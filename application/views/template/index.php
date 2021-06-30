@@ -98,7 +98,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
-                        <a class="collapse-item" href="<?php echo base_url('Spb') ?>">Daftar spb</a>
+                        <a class="collapse-item" href="<?php echo base_url('Spb') ?>">Spb</a>
+                        <a class="collapse-item" href="<?php echo base_url('Spb/daftar') ?>">Daftar Spb</a>
 
                     </div>
                 </div>

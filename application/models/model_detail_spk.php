@@ -22,7 +22,7 @@ class model_detail_spk extends CI_Model
         $this->db->select('*');
         $this->db->from($this->_table);
         $this->db->join('tb_material', 'tb_material.id_material=tb_detail_spk.id_material', 'left');
-        $this->db->join('tb_spk', 'tb_spk.id_spk=tb_spk.id_spk');
+        // $this->db->join('tb_spk', 'tb_spk.id_spk=tb_spk.id_spk');
         $this->db->where('tb_detail_spk.id_spk', $id_spk);
         $query = $this->db->get();
         return $query->result();

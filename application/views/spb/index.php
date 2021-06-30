@@ -38,19 +38,10 @@
                                 <td class="text-center"><?= $sp->model_name ?></td>
                                 <td class="text-center"><?= $sp->size ?></td>
                                 <td class="text-center">
-                                    <a onclick="deleteConfirm('<?= base_url('karyawan/delete/') ?>')" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split float-right mr-2"
-                                        data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <span class="icon text-white-5">
-                                            <i class="fas fa-trash"></i>
-                                        </span></a>
-                                    <a href="http://">
-                                        <button class="btn btn-success btn-sm float-right mr-2"><i
-                                                class="fas fa-edit"></i></button>
-                                    </a>
+
 
                                     <a href="<?php echo base_url('Spb/create/') . $sp->id_spk ?>"
-                                        class="btn btn-primary btn-sm btn-icon-split float-right mr-2">
+                                        class="btn btn-primary btn-sm btn-icon-split float">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus"></i>
                                         </span>

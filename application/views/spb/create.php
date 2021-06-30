@@ -2,22 +2,23 @@
 <div class="content-header">
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content bg-dark">
         <div class="container-fluid">
             <div class="row">
                 <!-- left column -->
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="card card-primary">
-                        <div class="card-header">
+                        <div class="card-header bg-dark text-light ">
                             <h5><i class="fas fa-edit"> Form Proses Proses Permintaan barang (SPB)</i></h5>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form method="post" action="<?= base_url('Spb/store') ?>">
+                            <input type="hidden" value="<?= $spk->id_spk ?>" name="id_spk">
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-5">
+                                <div class="row bg-primary text-light font-weight-bold">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="bom_id">Bom Id</label>
                                             <input type="text"
@@ -28,21 +29,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-5">
-                                        <div class="form-group">
-                                            <label for="kategori">Tanggal Order</label>
-                                            <input type="date"
-                                                class="form-control <?php echo form_error('tgl_order') ? 'is-invalid' : '' ?>"
-                                                id="tgl_order" name="tgl_order">
-                                            <div class="invalid-feedback">
-                                                <?php echo form_error('kategori'); ?>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="code_product">Code Product</label>
                                             <input type="text"
@@ -54,32 +41,7 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                    <?php foreach ($detail_spk as $m) : ?>
-
-                                    <input type="hidden" name="id_material[]" value="<?= $m->id_material ?>">
-                                    <div class="col-md-2">
-                                        <label for="id_material" class="text-danger font-bold">Material
-                                            <?= $m->nama_material ?></label>
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-
-                                                <input type="text"
-                                                    class="form-control <?php echo form_error('qty_request[]') ? 'is-invalid' : '' ?>"
-                                                    name="qty_request[]" placeholder="Qty">
-                                                <div class="invalid-feedback">
-                                                    <?php echo form_error('qty_request[]') ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php endforeach; ?>
-
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="model_name">Model Name</label>
                                             <input type="text"
@@ -93,10 +55,9 @@
                                     </div>
 
 
-
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-5">
+                                <div class="row bg-primary text-light font-weight-bold">
+                                    <div class="col-md-4">
 
                                         <div class="form-group">
                                             <label for="type_sample">Type Sample</label>
@@ -109,10 +70,7 @@
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
 
                                         <div class="form-group">
                                             <label for="size">Size (ukuran)</label>
@@ -124,6 +82,64 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+                                            <label for="size">Jumlah Product</label>
+                                            <input type="text"
+                                                class="form-control <?php echo form_error('size') ? 'is-invalid' : '' ?>"
+                                                id="size" name="size" value="<?= $spk->qty_product ?>" readonly>
+                                            <div class="invalid-feedback">
+                                                <?php echo form_error('size') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2 bg-warning font-weight-bold text-dark">
+
+                                    <div class="col-md-4">
+                                        <div class="form-group ">
+                                            <label for="order_date">Tanggal Order</label>
+                                            <input type="date"
+                                                class="form-control <?php echo form_error('order_date') ? 'is-invalid' : '' ?>"
+                                                id="order_date" name="order_date">
+                                            <div class="invalid-feedback">
+                                                <?php echo form_error('order_date'); ?>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row mt-2 bg-warning font-weight-bold text-dark">
+                                    <?php foreach ($detail_spk as $m) : ?>
+
+                                    <input type="hidden" name="id_material[]" value="<?= $m->id_material ?>">
+                                    <div class="col-md-3">
+                                        <label for="id_material" class="text-danger font-weight-bold"> Material
+                                            <?= $m->nama_material ?></label>
+                                        <div class="form-group">
+
+                                            <div class="input-group">
+
+                                                <input type="text"
+                                                    class="form-control <?php echo form_error('qty_request[]') ? 'is-invalid' : '' ?>"
+                                                    name="qty_request[]" placeholder="Qty" autocomplete="off">
+                                                <div class="invalid-feedback">
+                                                    <?php echo form_error('qty_request[]') ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+
+
+                                </div>
+
+
+                                <div class="row">
+
 
                                 </div>
                                 <div class="row">
