@@ -10,7 +10,7 @@
                     <!-- general form elements -->
                     <div class="card card-primary">
                         <div class="card-header bg-dark text-light ">
-                            <h5><i class="fas fa-edit"> Form Proses Proses Permintaan barang (SPB)</i></h5>
+                            <h5><i class="fas fa-edit"> Form Proses Permintaan barang (SPB)</i></h5>
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
@@ -125,7 +125,7 @@
 
                                                 <input type="text"
                                                     class="form-control <?php echo form_error('qty_request[]') ? 'is-invalid' : '' ?>"
-                                                    name="qty_request[]" placeholder="Qty" autocomplete="off">
+                                                    name="qty_request[]" placeholder="ukuran" autocomplete="off">
                                                 <div class="invalid-feedback">
                                                     <?php echo form_error('qty_request[]') ?>
                                                 </div>

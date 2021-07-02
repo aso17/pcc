@@ -34,11 +34,20 @@ class model_detail_spb extends CI_Model
         $jml_dipilih    = count($idmaterial);
         $jml_dipilih    = count($request);
         for ($x = 0; $x < $jml_dipilih; $x++) {
-            $this->id_spb = $id_b;
-            $this->id_spk = $id_spk;
-            $this->id_material = $idmaterial[$x];
-            $this->qty_request = $request[$x];
-            $this->db->insert($this->_table, $this);
+            for ($ukuran = 0; $ukuran < $jml_dipilih; $ukuran++) {
+                $ukuran = $this->db->get_where('tb_material', ['id_material' => $idmaterial[$x]])->result();
+                $jm_ukuran = count($ukuran);
+                for ($d = 0; $d < $jm_ukuran; $d++) {
+                    $uk[] = (int)$ukuran[$d]->ukuran - $request[$x];
+                    print_r($uk) . '<br>';
+                }
+            }
+
+            // $this->id_spb = $id_b;
+            // $this->id_spk = $id_spk;
+            // $this->id_material = $idmaterial[$x];
+            // $this->qty_request = $request[$x];
+            // $this->db->insert($this->_table, $this);
         }
     }
     public function detail($id_spk)
