@@ -45,4 +45,34 @@ class model_material extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function update_ukuran($post)
+    {
+        $idmaterial = $post['id_material'];
+        $request = $post['qty_request'];
+        $ukuran_request = [];
+        $index_request = 0;
+        $jml_dipilih    = count($idmaterial);
+        $jml_dipilih    = count($request);
+        for ($x = 0; $x < $jml_dipilih; $x++) {
+            for ($ukuran = 0; $ukuran < $jml_dipilih; $ukuran++) {
+                $ukuran = $this->db->get_where('tb_material', ['id_material' => $idmaterial[$x]])->result();
+                $jm_ukuran = count($ukuran);
+                for ($d = 0; $d < $jm_ukuran; $d++) {
+                    $ukuran_request[] = (int)$ukuran[$d]->ukuran - $request[$x];
+                    foreach ($ukuran_request as $r) {
+                        $in[$index_request] = $r;
+                        $t = count($in);
+                        $index_request++;
+                        for ($i = 0; $i < $t; $i++) {
+                            $data = [
+                                "ukuran" => $in[$i],
+                            ];
+                            $this->db->where('id_material', $idmaterial[$x]);
+                            $this->db->update('tb_material', $data);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

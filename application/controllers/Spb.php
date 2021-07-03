@@ -61,6 +61,7 @@ class Spb extends CI_Controller
             }
             $id_spk = $post['id_spk'];
 
+            $this->model_material->update_ukuran($post);
             $this->model_detail_spb->insert($post, $id_b, $id_spk);
             die;
             $this->session->set_flashdata('success', 'Request Barang Berhasil');
