@@ -360,10 +360,10 @@
             <script type="text/javascript">
             $(document).ready(function() {
                 $('#tabel').DataTable({
-                    "bPaginate": false,
-                    "bLengthChange": false,
+                    "bPaginate": true,
+                    "bLengthChange": true,
                     "bFilter": true,
-                    "bAutowidth": false
+                    "bAutowidth": true
 
                 });
             });

@@ -59,11 +59,11 @@ class Spb extends CI_Controller
             } else {
                 $id_b = $idsp;
             }
-            $id_spk = $post['id_spk'];
+
 
             $this->model_material->update_ukuran($post);
-            $this->model_detail_spb->insert($post, $id_b, $id_spk);
-            die;
+            $this->model_detail_spb->insert($post, $id_b);
+
             $this->session->set_flashdata('success', 'Request Barang Berhasil');
             redirect('Spb/daftar', 'refresh');
         }

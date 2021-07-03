@@ -22,5 +22,9 @@ class Warehouse extends CI_Controller
 
     public function approve($id_spk)
     {
+        //mengambil data yg belum ter approve
+        $data['spk'] = $this->model_spk->detail($id_spk);
+        $data['spb'] = $this->model_spb->GetAll_submit_Null($id_spk);
+        $this->template->load('template/index', 'warehouse/approve', $data);
     }
 }
