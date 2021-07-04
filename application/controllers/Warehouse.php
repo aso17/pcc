@@ -20,11 +20,34 @@ class Warehouse extends CI_Controller
         $this->template->load('template/index', 'warehouse/daftarspb', $data);
     }
 
-    public function approve($id_spk)
+    public function approve($id_spb)
     {
         //mengambil data yg belum ter approve
-        $data['spk'] = $this->model_spk->detail($id_spk);
-        $data['spb'] = $this->model_spb->GetAll_submit_Null($id_spk);
+        $data['spk'] = $this->model_spb->detail_spb($id_spb);
+        $data['spb'] = $this->model_detail_spb->GetAll_submit_Null($id_spb);
         $this->template->load('template/index', 'warehouse/approve', $data);
+    }
+    public function Store()
+    {
+        $post = $this->input->post();
+        $id_spb = $post['id_spk'];
+        $validation =  $this->form_validation->set_rules('submit_date', 'Tanggal submit', 'required');
+        $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
+
+
+
+        if ($validation->run() == 0) {
+            $id_spb = $post['id_spb'];
+            // $this->session->set_flashdata('warning', 'tanggal wajib diisi!!');
+            //mengambil data yg belum ter approve
+            $data['spk'] = $this->model_spb->detail_spb($id_spb);
+            $data['spb'] = $this->model_detail_spb->GetAll_submit_Null($id_spb);
+            $this->template->load('template/index', 'warehouse/approve', $data);
+        } else {
+            $post = $this->input->post();
+            $this->model_spb->updateSubmit($post, $id_spb);
+            $this->session->set_flashdata('success', 'berhasil diapprove');
+            redirect('Warehouse/daftarSpb');
+        }
     }
 }

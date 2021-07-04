@@ -18,7 +18,7 @@ class model_detail_spb extends CI_Model
             [
                 'field' => 'qty_request[]',
                 'label' => 'qty_request[]',
-                'rules' => 'required'
+                'rules' => 'required|numeric'
             ],
 
 
@@ -46,6 +46,20 @@ class model_detail_spb extends CI_Model
         $this->db->join('tb_material', 'tb_material.id_material=tb_detail_spk.id_material', 'left');
         // $this->db->join('tb_spk', 'tb_spk.id_spk=tb_spk.id_spk');
         $this->db->where('tb_detail_spk.id_spk', $id_spk);
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function GetAll_submit_Null($id_spb)
+    {
+
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->join('tb_spb', 'tb_spb.id_spb=tb_detail_spb.id_spb', 'left');
+        $this->db->join('tb_spk', 'tb_spk.id_spk=tb_spb.id_spk', 'left');
+        $this->db->join('tb_material', 'tb_material.id_material=tb_detail_spb.id_material', 'left');
+        $this->db->where('tb_spb.submit_date', '=', Null);
+        $this->db->or_where('tb_spb.id_spb', $id_spb);
+        // $this->db->group_by('tb_spb.id_spk', 'ASC');
         $query = $this->db->get();
         return $query->result();
     }

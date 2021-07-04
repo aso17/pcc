@@ -8,7 +8,7 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Daftar SPB</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Daftar Surat Permintaan Barang (SPB)</h6>
 
             </div>
 
@@ -41,7 +41,7 @@
                                 <td class="text-center">
 
 
-                                    <a href="<?= base_url('Warehouse/approve/') . $sp->id_spk ?>">
+                                    <a href="<?= base_url('Warehouse/approve/') . $sp->id_spb ?>">
                                         <button class="btn btn-success btn-sm float-right mr-2"><i
                                                 class="fas fa-calendar-alt"></i> Approve</button>
                                     </a>

@@ -32,6 +32,7 @@ class Spb extends CI_Controller
         $post = $this->input->post();
 
         $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
+        $this->form_validation->set_message('numeric', '%s harus angka!!');
 
         $spb = $this->model_spb;
         $spb = $this->model_detail_spb;

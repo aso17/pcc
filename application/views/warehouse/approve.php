@@ -48,10 +48,10 @@
                 </div>
             </div>
             <div class="row ">
-                <div class="col-md-6 bg-warning ml-4">
+                <div class="col-md-6 bg-light ml-4">
 
 
-                    <div class="card-body bg-warning">
+                    <div class="card-body bg-light">
                         <div class="card-header">
                             <h6 class="m-0 font-weight-bold text-primary">Jenis Material yang diminta</h6>
 
@@ -84,7 +84,7 @@
                             </table>
                         </div>
                     </div>
-                    <button class="btn btn-sm btn-primary float-right" id="approve" data-toggle="modal"
+                    <button class="btn btn-sm btn-primary float-right mb-2" id="approve" data-toggle="modal"
                         data-target="#modal_approve">Approve</button>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <div class="col-md">
 
                     <div class="card-footer bg-dark ">
-                        <a href="<?php echo base_url('Warehouse') ?>"
+                        <a href="<?php echo base_url('Warehouse/daftarSpb') ?>"
                             class="btn btn-danger btn-icon-split btn-sm float-right" style="margin-bottom: 5px;"><span
                                 class="icon text-white-5">
                                 <i class="fas fa-arrow-circle-left"></i></span>
@@ -116,15 +116,25 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="">
-                    <input type="date">
+                <form action="<?= base_url('Warehouse/Store') ?>" method="post">
+                    <input type="hidden" name="id_spk" value="<?= $spk->id_spb ?>">
+                    <div class="form-group text-light">
+                        <label for="submit_date">Tanggal konfirmasi</label>
+                        <input type="date"
+                            class="form-control <?php echo form_error('submit_date') ? 'is-invalid' : '' ?>"
+                            id="submit_date" name="submit_date">
+                        <div class="invalid-feedback">
+                            <?php echo form_error('submit_date') ?>
+                        </div>
+                    </div>
 
-                </form>
+
             </div>
             <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-outline-light" data-dismiss="modal">Send</button>
+                <button type="submit" class="btn btn-outline-light mb-2 btn-sm">Send</button>
 
             </div>
+            </form>
         </div>
         <!-- /.modal-content -->
     </div>
