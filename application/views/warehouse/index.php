@@ -25,10 +25,11 @@
 
 
     <!-- Content Row -->
-    <div class="row ">
-        <div class="col-md">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><a href="<?= base_url('warehouse/daftarSpb') ?>">Daftar SPB</a></li>
+    <div class="row bg-danger">
+        <div class="col-md bg-warning">
+            <ul class="list-group list-group-flush ">
+                <li class="list-group-item "><a href="<?= base_url('warehouse/daftarSpb') ?>">Daftar SPB</a>
+                </li>
                 <li class="list-group-item"> <a href="<?= base_url('Material') ?>">Material</a> </li>
 
 

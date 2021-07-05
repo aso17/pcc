@@ -59,7 +59,7 @@
                 </div>
             </div>
             <div class="row ">
-                <div class="col-md-6">
+                <div class="col-md-4">
 
 
                     <div class="card-header bg-light">
@@ -72,9 +72,9 @@
                                 <thead>
                                     <tr>
 
-                                        <th class="text-center">No</th>
-                                        <th class="text-center">Nama Material</th>
-                                        <th class="text-center">Ukuran </th>
+                                        <th class="" style="width: 5%;">No</th>
+                                        <th class="text-center " style="width: 25%;">Nama Material</th>
+
 
 
 
@@ -85,11 +85,11 @@
                                     <?php foreach ($detail_spk as $d) : ?>
                                     <tr>
 
-                                        <td class="text-center">
+                                        <td class="">
                                             <?= $i++; ?>
                                         </td>
                                         <td class="text-center"><?= $d->nama_material ?></td>
-                                        <td class="text-center"><?= $d->ukuran ?></td>
+
 
 
 

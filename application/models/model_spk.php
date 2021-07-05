@@ -64,6 +64,7 @@ class model_spk extends CI_Model
     {
         $this->db->select('*');
         $this->db->from($this->_table);
+        $this->db->order_by('tb_spk.id_spk', 'DESC');
         $query = $this->db->get();
         return $query->result();
     }
