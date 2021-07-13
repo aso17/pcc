@@ -11,7 +11,7 @@ class model_spk extends CI_Model
     public $size;
     public $code_product;
     public $qty_product;
-    public $decription;
+
     public function rules()
     {
         return [
@@ -54,11 +54,15 @@ class model_spk extends CI_Model
                 'rules' => 'required'
             ],
             [
-                'field' => 'material[]',
-                'label' => 'material[]',
+                'field' => 'id_material',
+                'label' => 'material',
                 'rules' => 'required'
             ],
         ];
+    }
+    public function Getby_idbom($bom_id)
+    {
+        return $this->db->get_where($this->_table, ['bom_id' => $bom_id])->row();
     }
     public function GetAll()
     {
@@ -77,7 +81,7 @@ class model_spk extends CI_Model
         $this->size = $post['size'];
         $this->code_product = $post['code_product'];
         $this->qty_product = $post['qty_product'];
-        $this->decription = $post['decription'];
+
 
         return $this->db->insert($this->_table, $this);
     }

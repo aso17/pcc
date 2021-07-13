@@ -67,15 +67,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-server"></i>
-                    <span>PCC Planing</span>
+                    <span>Planing</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Menu:</h6>
 
-                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Daftar Spk</a>
-                        <a class="collapse-item" href="<?php echo base_url('Planing/material') ?>">Daftar Material</a>
-
+                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Spk</a>
 
                     </div>
                 </div>
@@ -100,16 +98,13 @@
                         <h6 class="collapse-header">Menu:</h6>
                         <a class="collapse-item" href="<?php echo base_url('Spb') ?>">Spb</a>
                         <a class="collapse-item" href="<?php echo base_url('Spb/daftar') ?>">Daftar Spb</a>
+                        <a class="collapse-item" href="<?php echo base_url('Spk/upadate') ?>">Update Spk</a>
 
                     </div>
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-align-justify"></i>
-                    <span>Proses Planing</span></a>
-            </li>
+
 
 
             <hr class="sidebar-divider">
@@ -121,9 +116,19 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Warehouse') ?>">
+                <a class="nav-link" href="<?= base_url('Warehouse/daftarSpb') ?>">
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>Approve</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Material') ?>">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>Material</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Material') ?>">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>User</span></a>
             </li>
 
             <hr class="sidebar-divider">

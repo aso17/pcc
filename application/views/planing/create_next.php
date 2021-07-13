@@ -22,29 +22,21 @@
                                             <label for="bom_id">Bom Id</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('bom_id') ? 'is-invalid' : '' ?>"
-                                                id="bom_id" name="bom_id">
+                                                id="bom_id" name="bom_id" value="<?= $spk->bom_id ?>" readonly>
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('bom_id') ?>
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="kategori">Kategori Sample</label>
-                                            <select name="kategori" id="kategori"
-                                                class="form-control custom-form <?= form_error('kategori') ? 'is-invalid' : '' ?>"
-                                                name="kategori">
-
-                                                <option selected hidden value="">-- Pilih Kategori --</option>
-                                                <option value="KIDS">KIDS</option>
-                                                <option value="MAN">MAN</option>
-                                                <option value="WMN">WMN</option>
-                                                <option value="TROUGHPUT">TROUGHPUT</option>
-
-
-                                            </select>
+                                            <label for="kategori">Kategori</label>
+                                            <input type="text"
+                                                class="form-control <?php echo form_error('kategori') ? 'is-invalid' : '' ?>"
+                                                id="kategori" name="kategori" value="<?= $spk->kategori ?>" readonly>
                                             <div class="invalid-feedback">
-                                                <?php echo form_error('kategori'); ?>
+                                                <?php echo form_error('kategori') ?>
                                             </div>
                                         </div>
                                     </div>
@@ -56,7 +48,8 @@
                                             <label for="code_product">Code Product</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('code_product') ? 'is-invalid' : '' ?>"
-                                                id="code_product" name="code_product">
+                                                id="code_product" name="code_product" value="<?= $spk->code_product ?>"
+                                                readonly>
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('code_product') ?>
                                             </div>
@@ -68,7 +61,8 @@
                                             <label for="qty_product">Qty Product</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('qty_product') ? 'is-invalid' : '' ?>"
-                                                id="qty_product" name="qty_product">
+                                                id="qty_product" name="qty_product" value="<?= $spk->qty_product ?>"
+                                                readonly>
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('qty_product') ?>
                                             </div>
@@ -83,7 +77,8 @@
                                             <label for="model_name">Model Name</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('model_name') ? 'is-invalid' : '' ?>"
-                                                id="model_name" name="model_name">
+                                                id="model_name" name="model_name" value="<?= $spk->model_name ?>"
+                                                readonly>
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('model_name') ?>
                                             </div>
@@ -116,7 +111,8 @@
                                             <label for="type_sample">Type Sample</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('type_sample') ? 'is-invalid' : '' ?>"
-                                                id="type_sample" name="type_sample">
+                                                id="type_sample" name="type_sample" value="<?= $spk->type_sample ?>"
+                                                readonly>
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('type_sample') ?>
                                             </div>
@@ -135,16 +131,15 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <?php var_dump($detail_spk); ?>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-                                            <label for="size">Size (ukuran)</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('size') ? 'is-invalid' : '' ?>"
-                                                id="size" name="size">
+                                                id="size" name="size" value="<?= $spk->size ?>" readonly>
                                             <div class="invalid-feedback">
                                                 <?php echo form_error('size') ?>
                                             </div>
@@ -153,7 +148,15 @@
 
                                 </div>
                                 <div class="row">
+                                    <label for="size">Material dipilih</label>
+                                    <?php foreach ($detail_spk as $sp) : ?>
+                                    <div class="col-md-2">
+                                        <ul class="list-group">
+                                            <li class="list-group-item"><?= $sp->nama_sub ?></li>
 
+                                        </ul>
+                                    </div>
+                                    <?php endforeach; ?>
                                 </div>
 
                             </div>

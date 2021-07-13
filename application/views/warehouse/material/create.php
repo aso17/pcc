@@ -29,18 +29,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
 
-                                        <div class="form-group">
-                                            <label for="ukuran">Ukuran</label>
-                                            <input type="text"
-                                                class="form-control <?php echo form_error('ukuran') ? 'is-invalid' : '' ?>"
-                                                id="ukuran" name="ukuran">
-                                            <div class="invalid-feedback">
-                                                <?php echo form_error('ukuran') ?>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
                             </div>

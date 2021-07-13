@@ -5,6 +5,20 @@ class Material extends CI_Controller
     {
         parent::__construct();
         $this->load->model('model_material');
+        $this->load->model('model_submaterial');
+    }
+    public function get_sub()
+    {
+        $id_material = $_GET['id'];
+        $data = $this->model_submaterial->get_byid($id_material);
+        $output = '<option selected hidden value="">-- pilih --
+        </option>';
+        foreach ($data as $row) {
+            $output .= '<option value="' . $row->id_submaterial . '">' . $row->nama_sub . '</option>';
+        }
+
+        $this->output
+            ->set_output(json_encode($output));
     }
     public function index()
     {

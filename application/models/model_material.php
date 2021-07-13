@@ -4,7 +4,6 @@ class model_material extends CI_Model
 
     private $_table = "tb_material";
     public $nama_material;
-    public $ukuran;
 
     public function rules()
     {
@@ -15,17 +14,9 @@ class model_material extends CI_Model
                 'label' => 'nama_material',
                 'rules' => 'required'
             ],
-            // [
-            //     'field' => 'nama_material',
-            //     'label' => 'nama_material',
-            //     'rules' => 'is_unique[tb_material.nama_material]'
-            // ],
 
-            [
-                'field' => 'ukuran',
-                'label' => 'ukuran',
-                'rules' => 'required'
-            ],
+
+
 
         ];
     }
@@ -33,8 +24,6 @@ class model_material extends CI_Model
     {
 
         $this->nama_material = $post['nama_material'];
-        $this->ukuran = $post['ukuran'];
-
         return $this->db->insert($this->_table, $this);
     }
 
@@ -44,6 +33,14 @@ class model_material extends CI_Model
         $this->db->from($this->_table);
         $query = $this->db->get();
         return $query->result();
+    }
+    public function get_byid($id_material)
+    {
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->where('id_material', $id_material);
+        $query = $this->db->get();
+        return $query->row();
     }
     public function update_ukuran($post)
     {

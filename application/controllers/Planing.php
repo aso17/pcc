@@ -26,6 +26,7 @@ class Planing extends CI_Controller
     public function store()
     {
         $post = $this->input->post();
+
         $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
 
         $planing = $this->model_spk;
@@ -53,7 +54,11 @@ class Planing extends CI_Controller
 
             $this->model_detail_spk->insert($post, $idss);
             $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
-            redirect('Planing', 'refresh');
+            $bom_id = $post['bom_id'];
+            $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
+            $data['detail_spk'] = $this->model_detail_spk->Getby_idbom($bom_id);
+            $data['material'] = $this->model_material->GetAll();
+            $this->template->load('template/index', 'planing/create_next', $data);
         }
     }
     public function show($id_spk)
