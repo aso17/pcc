@@ -26,7 +26,6 @@
                                 <th class="text-center">Size</th>
                                 <th class="text-center">Product Code</th>
                                 <th class="text-center">Qty Product</th>
-                                <th class="text-center">Decription</th>
 
                             </tr>
                         </thead>
@@ -41,12 +40,7 @@
                                 <td class="text-center"><?= $spk->size ?></td>
                                 <td class="text-center"><?= $spk->code_product ?></td>
                                 <td class="text-center"><?= $spk->qty_product ?></td>
-                                <td class="text-center">
-                                    <?php if (empty($spk->decription)) { ?>
-                                    null
 
-                                    <?php }; ?>
-                                    <?= $spk->decription ?>
                                 </td>
 
 
@@ -74,6 +68,7 @@
 
                                         <th class="" style="width: 5%;">No</th>
                                         <th class="text-center " style="width: 25%;">Nama Material</th>
+                                        <th class="text-center " style="width: 25%;">Material Request</th>
 
 
 
@@ -82,20 +77,16 @@
                                 </thead>
                                 <tbody>
                                     <?php $i = 1; ?>
-                                    <?php foreach ($detail_spk as $d) : ?>
+                                    <?php
+                                    foreach ($detail_spk as $d) : ?>
                                     <tr>
-
                                         <td class="">
                                             <?= $i++; ?>
                                         </td>
-                                        <td class="text-center"><?= $d->nama_material ?></td>
-
-
-
-
+                                        <td class="text-center"><?= $d->nama_sub ?></td>
+                                        <td class="text-center"><?= $d->jml_request ?></td>
 
                                     </tr>
-
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>

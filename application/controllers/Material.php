@@ -14,7 +14,7 @@ class Material extends CI_Controller
         $output = '<option selected hidden value="">-- pilih --
         </option>';
         foreach ($data as $row) {
-            $output .= '<option value="' . $row->id_submaterial . '">' . $row->nama_sub . '</option>';
+            $output .= '<option name="id_submaterial" value="' . $row->id_submaterial . '">' . $row->nama_sub . '</option>';
         }
 
         $this->output

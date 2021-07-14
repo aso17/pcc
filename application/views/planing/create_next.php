@@ -14,7 +14,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form method="post" action="<?= base_url('Planing/store') ?>">
+                        <form method="post" action="<?= base_url('Planing/store_next') ?>">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -131,12 +131,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <?php var_dump($detail_spk); ?>
+
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
 
                                         <div class="form-group">
+                                            <label for="size">ukuran sample</label>
                                             <input type="text"
                                                 class="form-control <?php echo form_error('size') ? 'is-invalid' : '' ?>"
                                                 id="size" name="size" value="<?= $spk->size ?>" readonly>
@@ -146,17 +147,18 @@
                                         </div>
                                     </div>
 
-                                </div>
-                                <div class="row">
-                                    <label for="size">Material dipilih</label>
-                                    <?php foreach ($detail_spk as $sp) : ?>
-                                    <div class="col-md-2">
-                                        <ul class="list-group">
-                                            <li class="list-group-item"><?= $sp->nama_sub ?></li>
+                                    <div class="col-md-6">
 
-                                        </ul>
+                                        <div class="form-group">
+                                            <label for="request">Ukuran request</label>
+                                            <input type="text"
+                                                class="form-control <?php echo form_error('request') ? 'is-invalid' : '' ?>"
+                                                id="request" name="request" require>
+                                            <div class="invalid-feedback">
+                                                <?php echo form_error('request') ?>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <?php endforeach; ?>
                                 </div>
 
                             </div>

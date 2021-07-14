@@ -58,6 +58,11 @@ class model_spk extends CI_Model
                 'label' => 'material',
                 'rules' => 'required'
             ],
+            [
+                'field' => 'request',
+                'label' => 'request',
+                'rules' => 'required'
+            ],
         ];
     }
     public function Getby_idbom($bom_id)

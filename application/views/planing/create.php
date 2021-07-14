@@ -150,11 +150,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-6">
+
+                                        <div class="form-group">
+                                            <label for="request">Ukuran request</label>
+                                            <input type="text"
+                                                class="form-control <?php echo form_error('request') ? 'is-invalid' : '' ?>"
+                                                id="request" name="request">
+                                            <div class="invalid-feedback">
+                                                <?php echo form_error('request') ?>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
-                                <div class="row">
 
-                                </div>
 
                             </div>
                             <!-- /.card-body -->
