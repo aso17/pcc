@@ -8,7 +8,7 @@
         <div class="card shadow mb-4 bg-dark">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex  bg-primary flex-row align-items-center justify-content-between">
-                <h4 class="m-0 font-weight-bold text-light">Data Planing</h4>
+                <h5 class="m-0 font-weight-bold text-light">Data Spb (Surat Permintaan Barang)</h5>
 
             </div>
 
@@ -26,21 +26,21 @@
                                 <th class="text-center">Size</th>
                                 <th class="text-center">Product Code</th>
                                 <th class="text-center">Qty Product</th>
-                                <th class="text-center">Decription</th>
+
 
                             </tr>
                         </thead>
                         <tbody>
 
                             <tr>
-                                <td class="text-center"><?= $spk->bom_id ?></td>
-                                <td class="text-center"><?= $spk->kategori ?></td>
-                                <td class="text-center"><?= $spk->type_sample ?></td>
-                                <td class="text-center"><?= $spk->model_name ?></td>
-                                <td class="text-center"><?= $spk->size ?></td>
-                                <td class="text-center"><?= $spk->code_product ?></td>
-                                <td class="text-center"><?= $spk->qty_product ?></td>
-                                <td class="text-center"><?= $spk->decription ?></td>
+                                <td class="text-center"><?= $spb->bom_id ?></td>
+                                <td class="text-center"><?= $spb->kategori ?></td>
+                                <td class="text-center"><?= $spb->type_sample ?></td>
+                                <td class="text-center"><?= $spb->model_name ?></td>
+                                <td class="text-center"><?= $spb->size ?></td>
+                                <td class="text-center"><?= $spb->code_product ?></td>
+                                <td class="text-center"><?= $spb->qty_product ?></td>
+
                             </tr>
 
                         </tbody>
@@ -71,11 +71,11 @@
                                 </thead>
                                 <tbody>
                                     <?php $i = 1; ?>
-                                    <?php foreach ($spb as $sp) : ?>
+                                    <?php foreach ($detail_spk as $sp) : ?>
                                     <tr>
                                         <td class=""><?= $i++ ?>. </td>
-                                        <td class=""><?= $sp->nama_material ?></td>
-                                        <td class="text-center"><?= $sp->qty_request ?></td>
+                                        <td class=""><?= $sp->nama_sub ?></td>
+                                        <td class="text-center"><?= $sp->jml_request ?></td>
 
                                     </tr>
                                     <?php endforeach; ?>
@@ -117,7 +117,7 @@
             </div>
             <div class="modal-body">
                 <form action="<?= base_url('Warehouse/Store') ?>" method="post">
-                    <input type="hidden" name="id_spk" value="<?= $spk->id_spb ?>">
+                    <input type="hidden" name="id_spk" value="<?= $spb->id_spk ?>">
                     <div class="form-group text-light">
                         <label for="submit_date">Tanggal konfirmasi</label>
                         <input type="date"

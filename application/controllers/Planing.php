@@ -6,6 +6,7 @@ class Planing extends CI_Controller
         parent::__construct();
         $this->load->model('model_spk');
         $this->load->model('model_material');
+        $this->load->model('model_submaterial');
         $this->load->model('model_detail_spk');
     }
     public function index()
@@ -50,6 +51,13 @@ class Planing extends CI_Controller
             $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
             $bom_id = $post['bom_id'];
             $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
+
+            $id_submaterial = $post['id_submaterial'];
+            $ukuran = $this->model_submaterial->get_id($id_submaterial);
+            $nilai = $ukuran->ukuran;
+            $hasil = $nilai - $post['request'];
+
+            $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
             $this->model_detail_spk->insert($post, $idss);
             $data['material'] = $this->model_material->GetAll();
             $this->template->load('template/index', 'planing/create_next', $data);
@@ -79,15 +87,23 @@ class Planing extends CI_Controller
         $post = $this->input->post();
         $bom_id = $post['bom_id'];
         $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
+        $id_submaterial = $post['id_submaterial'];
+        $ukuran = $this->model_submaterial->get_id($id_submaterial);
+        $nilai = $ukuran->ukuran;
+        $hasil = $nilai - $post['request'];
+        $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
         $this->model_detail_spk->insert($post, $idss);
         $data['material'] = $this->model_material->GetAll();
+
         $this->template->load('template/index', 'planing/create_next', $data);
     }
     public function show($id_spk)
     {
+
         $data['spk'] = $this->model_spk->detail($id_spk);
         $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
-
+        // var_dump($data['detail_spk']);
+        // die;
         $this->template->load('template/index', 'planing/show', $data);
     }
 }

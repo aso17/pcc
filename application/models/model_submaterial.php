@@ -49,4 +49,23 @@ class model_submaterial extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function get_id($id_submaterial)
+    {
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        // $this->db->join('tb_material', 'tb_material.id_material=tb_submaterial.id_material');
+        $this->db->where('id_submaterial', $id_submaterial);
+        $query = $this->db->get();
+        return $query->row();
+    }
+    public function update_ukuran($id_submaterial, $hasil)
+    {
+        $data = array(
+            'ukuran' => $hasil
+
+        );
+
+        $this->db->where('id_submaterial', $id_submaterial);
+        $this->db->update('tb_submaterial', $data);
+    }
 }

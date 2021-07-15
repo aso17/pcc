@@ -7,7 +7,7 @@ class Spb extends CI_Controller
         $this->load->model('model_spb');
         $this->load->model('model_spk');
         $this->load->model('model_material');
-        $this->load->model('model_detail_spb');
+        $this->load->model('model_submaterial');
         $this->load->model('model_detail_spk');
     }
     public function index()
@@ -29,16 +29,12 @@ class Spb extends CI_Controller
     public function store()
     {
 
-        $post = $this->input->post();
-
         $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
-        $this->form_validation->set_message('numeric', '%s harus angka!!');
-
         $spb = $this->model_spb;
-        $spb = $this->model_detail_spb;
         $validation = $this->form_validation;
         $validation->set_rules($spb->rules());
         if ($validation->run() == 0) {
+            $post = $this->input->post();
             $id_spk = $post['id_spk'];
             $data['spk'] = $this->model_spk->detail($id_spk);
             $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
@@ -46,27 +42,19 @@ class Spb extends CI_Controller
         } else {
 
             $post = $this->input->post();
+
             //tb_spb         
             $this->model_spb->insert($post);
-
-            //tb detail spb
-            $idspb = $this->model_spb->orderby()->row();
-
-
-            $idsp = $idspb->id_spb;
-
-            if (empty($idsp)) {
-                $id_b = 1;
-            } else {
-                $id_b = $idsp;
-            }
-
-
-            $this->model_material->update_ukuran($post);
-            $this->model_detail_spb->insert($post, $id_b);
-
             $this->session->set_flashdata('success', 'Request Barang Berhasil');
             redirect('Spb/daftar', 'refresh');
         }
+    }
+
+    public function show($id_spk)
+    {
+
+        $data['spb'] = $this->model_spb->detail_spb($id_spk);
+        $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
+        $this->template->load('template/index', 'spb/show', $data);
     }
 }

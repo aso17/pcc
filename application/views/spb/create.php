@@ -14,8 +14,9 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
+
                         <form method="post" action="<?= base_url('Spb/store') ?>">
-                            <input type="hidden" value="<?= $spk->id_spk ?>" name="id_spk">
+                            <input type="hidden" name="id_spk" value="<?= $spk->id_spk ?>">
                             <div class="card-body">
                                 <div class="row bg-primary text-light font-weight-bold">
                                     <div class="col-md-4">
@@ -95,6 +96,29 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                <div class="row mt-2 bg-primary text-light font-weight-boldk">
+                                    <?php foreach ($detail_spk as $m) : ?>
+
+                                    <input type="hidden" name="id_material[]" value="<?= $m->id_submaterial ?>">
+                                    <div class="col-md-3">
+                                        <label for="id_material" class=""> Material
+                                            <?= $m->nama_sub ?></label>
+                                        <div class="form-group">
+
+                                            <div class="input-group">
+
+                                                <input type="text" class="form-control" name="request"
+                                                    value="<?= $m->jml_request ?>" autocomplete="off" readonly>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <?php endforeach; ?>
+
+
+                                </div>
                                 <div class="row mt-2 bg-warning font-weight-bold text-dark">
 
                                     <div class="col-md-4">
@@ -108,31 +132,6 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                </div>
-
-                                <div class="row mt-2 bg-warning font-weight-bold text-dark">
-                                    <?php foreach ($detail_spk as $m) : ?>
-
-                                    <input type="hidden" name="id_material[]" value="<?= $m->id_material ?>">
-                                    <div class="col-md-3">
-                                        <label for="id_material" class="text-danger font-weight-bold"> Material
-                                            <?= $m->nama_material ?></label>
-                                        <div class="form-group">
-
-                                            <div class="input-group">
-
-                                                <input type="text"
-                                                    class="form-control <?php echo form_error('qty_request[]') ? 'is-invalid' : '' ?>"
-                                                    name="qty_request[]" placeholder="ukuran" autocomplete="off">
-                                                <div class="invalid-feedback">
-                                                    <?php echo form_error('qty_request[]') ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <?php endforeach; ?>
 
 
                                 </div>

@@ -7,7 +7,6 @@ class Approve extends CI_Controller
         $this->load->model('model_spb');
         $this->load->model('model_spk');
         $this->load->model('model_material');
-        $this->load->model('model_detail_spb');
         $this->load->model('model_detail_spk');
     }
     public function index()

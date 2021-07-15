@@ -21,7 +21,6 @@
                                 <th class="text-center">No</th>
                                 <th class="text-center">BOM ID</th>
                                 <th class="text-center">Model Name</th>
-                                <th class="text-center">Qty Request</th>
                                 <th class="text-center">Date Order</th>
                                 <th class="text-center">Date Submit</th>
                                 <th class="text-center">Aksi</th>
@@ -33,8 +32,7 @@
                             <tr>
                                 <td class="text-center"><?= $i++ ?>.</td>
                                 <td class="text-center"><?= $sp->bom_id ?></td>
-                                <td class="text-center"><?= $sp->nama_material ?></td>
-                                <td class="text-center"><?= $sp->qty_request ?></td>
+                                <td class="text-center"><?= $sp->model_name ?></td>
                                 <td class="text-center"><?= $sp->order_date ?></td>
                                 <td class="text-center">
                                     <?php if (empty($sp->submit_date)) { ?>
@@ -44,20 +42,16 @@
                                 </td>
                                 <td class="text-center">
 
+                                    <a href="<?= base_url('Spb/show/') . $sp->id_spk ?>">
+                                        <button class="btn btn-secondary btn-sm  "><i class="fas fa-eye"></i></button>
+                                    </a>
                                     <a onclick="deleteConfirm('<?= base_url('Planing/delete/') ?>')" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split float-right mr-2 "
-                                        data-toggle="tooltip" data-placement="top" title="Delete">
+                                        class="btn btn-danger btn-sm btn-icon-split  ml-2" data-toggle="tooltip"
+                                        data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
                                             <i class="fas fa-trash"></i>
                                         </span></a>
-                                    <a href="http://">
-                                        <button class="btn btn-success btn-sm float-right mr-2"><i
-                                                class="fas fa-edit"></i></button>
-                                    </a>
-                                    <a href="<?= base_url('Planing/show/') . $sp->id_spk ?>">
-                                        <button class="btn btn-secondary btn-sm float-right mr-2 "><i
-                                                class="fas fa-eye"></i></button>
-                                    </a>
+
                                 </td>
                             </tr>
                             <?php endforeach; ?>

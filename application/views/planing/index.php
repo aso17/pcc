@@ -43,13 +43,14 @@
                                 <td class="text-center"><?= $sp->size ?></td>
                                 <td class="text-center">
                                     <a href="<?= base_url('Planing/show/') . $sp->id_spk ?>">
-                                        <button class="btn btn-secondary btn-sm "><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-secondary btn-sm mx-1 "><i
+                                                class="fas fa-eye"></i></button>
                                     </a>
                                     <a href="http://">
-                                        <button class="btn btn-success btn-sm "><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-success btn-sm mx-1"><i class="fas fa-edit"></i></button>
                                     </a>
                                     <a onclick="deleteConfirm('<?= base_url('karyawan/delete/') ?>')" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split" data-toggle="tooltip"
+                                        class="btn btn-danger btn-sm btn-icon-split mx-1" data-toggle="tooltip"
                                         data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
                                             <i class="fas fa-trash"></i>

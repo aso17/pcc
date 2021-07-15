@@ -21,10 +21,9 @@
                                 <th class="text-center">No</th>
                                 <th class="text-center">BOM ID</th>
                                 <th class="text-center">Model Name</th>
-
-
-                                <th class="text-center">Qty Product</th>
+                                <th class="text-center">Qty Sample</th>
                                 <th class="text-center">kategori</th>
+                                <th class="text-center">Tanggal Request</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
@@ -38,10 +37,11 @@
                                 <td class="text-center"><?= $sp->model_name ?></td>
                                 <td class="text-center"><?= $sp->qty_product ?></td>
                                 <td class="text-center"><?= $sp->kategori ?></td>
+                                <td class="text-center"><?= $sp->order_date ?></td>
                                 <td class="text-center">
 
 
-                                    <a href="<?= base_url('Warehouse/approve/') . $sp->id_spb ?>">
+                                    <a href="<?= base_url('Warehouse/approve/') . $sp->id_spk ?>">
                                         <button class="btn btn-success btn-sm float-right mr-2"><i
                                                 class="fas fa-calendar-alt"></i> Approve</button>
                                     </a>
