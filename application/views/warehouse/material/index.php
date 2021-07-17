@@ -38,13 +38,13 @@
 
                                 <td class="">
 
-                                    <a onclick="deleteConfirm('<?= base_url('karyawan/delete/') ?>')" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split float-right mr-3"
+                                    <a onclick="deleteConfirm('<?= base_url('Material/delete/' . $mate->id_material) ?>')"
+                                        href="#!" class="btn btn-danger btn-sm btn-icon-split float-right mr-3"
                                         data-toggle="tooltip" data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
                                             <i class="fas fa-trash"></i>
                                         </span></a>
-                                    <a href="http://">
+                                    <a href="<?= base_url('Material/edit/' . $mate->id_material) ?>">
                                         <button class="btn btn-success btn-sm float-right mr-3"><i
                                                 class="fas fa-edit"></i></button>
                                     </a>

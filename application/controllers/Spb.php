@@ -12,7 +12,7 @@ class Spb extends CI_Controller
     }
     public function index()
     {
-        $data['spk'] = $this->model_spk->GetAll();
+        $data['spk'] = $this->model_spk->GetAll_status_null();
         $this->template->load('template/index', 'spb/index', $data);
     }
     public function daftar()

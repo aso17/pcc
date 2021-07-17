@@ -98,7 +98,7 @@
                         <h6 class="collapse-header">Menu:</h6>
                         <a class="collapse-item" href="<?php echo base_url('Spb') ?>">Spb</a>
                         <a class="collapse-item" href="<?php echo base_url('Spb/daftar') ?>">Daftar Spb</a>
-                        <a class="collapse-item" href="<?php echo base_url('Spk/upadate') ?>">Update Spk</a>
+                        <a class="collapse-item" href="<?php echo base_url('Planing/proses') ?>">Peoses Spb</a>
 
                     </div>
                 </div>

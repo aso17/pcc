@@ -41,13 +41,13 @@
                                 <td class=""><?= $sub->ukuran . ' ' . $sub->satuan ?></td>
                                 <td class="" style="width: 25%;">
 
-                                    <a onclick="deleteConfirm('<?= base_url('karyawan/delete/') ?>')" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split float-right mr-3"
+                                    <a onclick="deleteConfirm('<?= base_url('Submaterial/delete/' . $sub->id_submaterial . '/' . $sub->id_material) ?>')"
+                                        href="#!" class="btn btn-danger btn-sm btn-icon-split float-right mr-3"
                                         data-toggle="tooltip" data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
                                             <i class="fas fa-trash"></i>
                                         </span></a>
-                                    <a href="">
+                                    <a href="<?= base_url('Submaterial/edit/' . $sub->id_submaterial) ?>">
                                         <button class="btn btn-success btn-sm float-right mr-3"><i
                                                 class="fas fa-edit"></i></button>
                                     </a>

@@ -26,13 +26,10 @@
                                 <th class="text-center">Size</th>
                                 <th class="text-center">Product Code</th>
                                 <th class="text-center">Qty Product</th>
-
                             </tr>
                         </thead>
                         <tbody>
-
                             <tr>
-
                                 <td class="text-center"><?= $spk->bom_id ?></td>
                                 <td class="text-center"><?= $spk->kategori ?></td>
                                 <td class="text-center"><?= $spk->type_sample ?></td>
@@ -40,14 +37,8 @@
                                 <td class="text-center"><?= $spk->size ?></td>
                                 <td class="text-center"><?= $spk->code_product ?></td>
                                 <td class="text-center"><?= $spk->qty_product ?></td>
-
                                 </td>
-
-
-
                             </tr>
-
-
                         </tbody>
                     </table>
                 </div>
@@ -90,13 +81,11 @@
         </div>
         <div class="row">
             <div class="col-md">
-
                 <div class="card-footer">
                     <a href="<?php echo base_url('Planing') ?>" class="btn btn-danger btn-icon-split btn-sm float-right"
                         style="margin-bottom: 5px;"><span class="icon text-white-5">
                             <i class="fas fa-arrow-circle-left"></i></span>
                         <span class="font-weight-bold text">Back</span></a>
-
                 </div>
             </div>
         </div>

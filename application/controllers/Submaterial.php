@@ -39,4 +39,25 @@ class Submaterial extends CI_Controller
             redirect('submaterial/detail_material/' . $post['id_material'], 'refresh');
         }
     }
+    public function edit($id_submaterial)
+    {
+        $data['material'] = $this->model_submaterial->get_id($id_submaterial);
+        $this->template->load('template/index', 'warehouse/submaterial/edit', $data);
+    }
+    public function update()
+    {
+        $post = $this->input->post();
+        $this->model_submaterial->update($post);
+        $this->session->set_flashdata('info', 'Data Submaterial telah diubah');
+        redirect('submaterial/detail_material/' . $post['id_material'], 'refresh');
+    }
+    public function delete($id_submaterial, $id_material)
+    {
+
+        $this->model_submaterial->delete($id_submaterial);
+        $this->session->set_flashdata('warning', 'Data Material dihapus');
+
+        $id_ma = $id_material;
+        redirect('submaterial/detail_material/' . $id_ma, 'refresh');
+    }
 }

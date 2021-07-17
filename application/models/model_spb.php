@@ -42,6 +42,7 @@ class model_spb extends CI_Model
 
         return $index->result();
     }
+
     public function insert($post)
     {
         $this->id_spk = $post['id_spk'];

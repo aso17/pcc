@@ -47,4 +47,24 @@ class Material extends CI_Controller
             redirect('Material', 'refresh');
         }
     }
+
+    public function edit($id_material)
+    {
+        $data['material'] = $this->model_material->get_byid($id_material);
+        $this->template->load('template/index', 'warehouse/material/edit', $data);
+    }
+    public function update()
+    {
+        $post = $this->input->post();
+        $this->model_material->update($post);
+        $this->session->set_flashdata('success', 'Data Material telah diuabah');
+        redirect('Material', 'refresh');
+    }
+    public function delete($id_material)
+    {
+
+        $this->model_material->delete($id_material);
+        $this->session->set_flashdata('info', 'Data Material dihapus');
+        redirect('Material', 'refresh');
+    }
 }

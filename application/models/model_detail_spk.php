@@ -24,7 +24,8 @@ class model_detail_spk extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('tb_detail_spk');
-        // $this->db->join('tb_material', 'tb_material.id_material=tb_submaterial.id_material', 'left');
+        $this->db->join('tb_spk', 'tb_spk.id_spk=tb_detail_spk.id_spk', 'left');
+        $this->db->join('tb_spb', 'tb_spb.id_spk=tb_spk.id_spk', 'left');
         $this->db->where('tb_detail_spk.id_spk', $id_spk);
         // $this->db->group_by("tb_submaterial.id_material");
         $query = $this->db->get();

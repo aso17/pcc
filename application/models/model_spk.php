@@ -4,7 +4,6 @@ class model_spk extends CI_Model
 
     private $_table = "tb_spk";
     public $bom_id;
-    public $id_proses;
     public $type_sample;
     public $kategori;
     public $model_name;
@@ -77,6 +76,15 @@ class model_spk extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function GetAll_status_null()
+    {
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->where(['status' => NULL]);
+        $this->db->order_by('tb_spk.id_spk', 'DESC');
+        $query = $this->db->get();
+        return $query->result();
+    }
     public function insert($post)
     {
         $this->bom_id = $post['bom_id'];
@@ -102,5 +110,15 @@ class model_spk extends CI_Model
         $this->db->where('tb_spk.id_spk', $id_spk);
         $query = $this->db->get();
         return $query->row();
+    }
+
+    public function update_status($post)
+    {
+        $id_spk = $post['id_spk'];
+        $data = [
+            "status" => $post['nama_proses']
+        ];
+        $this->db->where('id_spk', $id_spk);
+        $this->db->update('tb_spk', $data);
     }
 }

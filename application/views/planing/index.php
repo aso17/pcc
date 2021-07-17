@@ -28,6 +28,7 @@
                                 <th class="text-center">Type Sample</th>
                                 <th class="text-center">Model Name</th>
                                 <th class="text-center">Size</th>
+                                <th class="text-center">Status</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
                         </thead>
@@ -41,6 +42,20 @@
                                 <td class="text-center"><?= $sp->type_sample ?></td>
                                 <td class="text-center"><?= $sp->model_name ?></td>
                                 <td class="text-center"><?= $sp->size ?></td>
+                                <td class="text-center">
+                                    <?php if (!empty($sp->status)) { ?>
+                                    <button type="button" class="btn btn-sm btn-dark text-dark">
+                                        <span class="badge badge-warning text-dark"><?= $sp->status ?></button>
+                                    </span>
+                                    </button>
+                                    <?php } else { ?>
+                                    <button type="button" class="btn btn-sm btn-dark text-dark">
+                                        <span class="badge badge-warning text-dark">Null</button>
+                                    </span>
+                                    </button>
+                                    <?php } ?>
+
+                                </td>
                                 <td class="text-center">
                                     <a href="<?= base_url('Planing/show/') . $sp->id_spk ?>">
                                         <button class="btn btn-secondary btn-sm mx-1 "><i

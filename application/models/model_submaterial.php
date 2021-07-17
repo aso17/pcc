@@ -19,7 +19,10 @@ class model_submaterial extends CI_Model
             [
                 'field' => 'ukuran',
                 'label' => 'ukuran',
-                'rules' => 'required'
+                'rules' => 'required|numeric',
+                'errors' => [
+                    'numeric' => '%s harus angka'
+                ],
             ],
             [
                 'field' => 'satuan',
@@ -39,6 +42,24 @@ class model_submaterial extends CI_Model
         $this->satuan = $post['satuan'];
         return $this->db->insert($this->_table, $this);
     }
+    public function update($post)
+    {
+        $id_submaterial = $post['id_submaterial'];
+        $data = array(
+            'nama_sub' => $post['nama_sub'],
+            'ukuran' => $post['ukuran'],
+            'satuan' => $post['satuan']
+        );
+
+        $this->db->where('id_submaterial', $id_submaterial);
+        $this->db->update('tb_submaterial', $data);
+    }
+    public function delete($id_submaterial)
+    {
+
+        $this->db->where('id_submaterial', $id_submaterial);
+        $this->db->delete($this->_table);
+    }
 
     public function get_byid($id_material)
     {
@@ -53,7 +74,6 @@ class model_submaterial extends CI_Model
     {
         $this->db->select('*');
         $this->db->from($this->_table);
-        // $this->db->join('tb_material', 'tb_material.id_material=tb_submaterial.id_material');
         $this->db->where('id_submaterial', $id_submaterial);
         $query = $this->db->get();
         return $query->row();

@@ -26,6 +26,18 @@ class model_material extends CI_Model
         $this->nama_material = $post['nama_material'];
         return $this->db->insert($this->_table, $this);
     }
+    public function update($post)
+    {
+        $id_material = $post['id_material'];
+        $this->db->set('nama_material', $post['nama_material']);
+        $this->db->where('id_material', $id_material);
+        $this->db->update($this->_table);
+    }
+    public function delete($id_material)
+    {
+        $this->db->where('id_material', $id_material);
+        $this->db->delete($this->_table);
+    }
 
     public function GetAll()
     {
