@@ -52,7 +52,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
+            <?php if ($this->session->userdata('devisi') == 'planing' and 'IT sport') { ?>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -80,7 +80,9 @@
             </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
+            <?php } ?>
 
+            <?php if ($this->session->userdata('devisi') == 'workshop') { ?>
             <!-- Heading -->
             <div class="sidebar-heading">
                 Workshop
@@ -104,16 +106,14 @@
                 </div>
             </li>
 
-
-
-
             <hr class="sidebar-divider">
+            <?php } ?>
             <!-- Heading -->
+            <?php if ($this->session->userdata('devisi') == 'development') { ?>
             <div class="sidebar-heading">
                 Warehouse
             </div>
             <!-- Nav Item - Pages Collapse Menu -->
-
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Warehouse/daftarSpb') ?>">
@@ -125,18 +125,26 @@
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>Material</span></a>
             </li>
+
+            <?php } ?>
+
+
+            <?php if ($this->session->userdata('devisi') == 'IT sport') { ?>
+
+
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Users') ?>">
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>User</span></a>
             </li>
 
+            <?php } ?>
+            <?php if ($this->session->userdata('devisi') == 'planing') { ?>
             <hr class="sidebar-divider">
             <!-- Heading -->
             <div class="sidebar-heading">
                 Laporan
             </div>
-
             <!-- Nav Item - Pages Collapse Menu Laporan -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
@@ -155,9 +163,9 @@
             </li>
 
 
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
+            <?php } ?>
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -220,7 +228,9 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="font-weight-bold d-none d-lg-inline text-primary large">Muhrodi</span>
+
+                                <span
+                                    class="font-weight-bold d-none d-lg-inline text-primary large"><?= $this->session->userdata('devisi') ?></span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -234,7 +244,8 @@
                                 <?php //endforeach; 
                                 ?>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="<? base_url('Login/logout') ?>" data-toggle="modal"
+                                    data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Logout
                                 </a>
@@ -288,7 +299,7 @@
                         </div>
                         <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancel</button>
-                            <a class="btn btn-outline-light" href="<?php echo site_url('auth/logout') ?>">Logout</a>
+                            <a class="btn btn-outline-light" href="<?php echo site_url('Login/logout') ?>">Logout</a>
                         </div>
                     </div>
                     <!-- /.modal-content -->

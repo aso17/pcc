@@ -83,6 +83,10 @@ class model_user extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function getBy_username($username)
+    {
+        return $this->db->get_where($this->_table, ['username' => $username])->row();
+    }
 
     public function insert($post)
     {
