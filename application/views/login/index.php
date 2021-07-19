@@ -42,7 +42,7 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-grey-900 mb-1">LOG IN</h1>
                                     </div>
-                                    <form class="user" method="POST" action="<?= base_url('/dashboard'); ?> ">
+                                    <form class="user" method="POST" action="<?= base_url('Login/store'); ?> ">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="username"
                                                 placeholder="Masukkan Username" value="<?= set_value('username') ?>"

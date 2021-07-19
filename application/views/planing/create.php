@@ -17,7 +17,7 @@
                         <form method="post" action="<?= base_url('Planing/store') ?>">
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="bom_id">Bom Id</label>
                                             <input type="text"
@@ -28,7 +28,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="kategori">Kategori Sample</label>
                                             <select name="kategori" id="kategori"
@@ -51,7 +51,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="code_product">Code Product</label>
                                             <input type="text"
@@ -63,7 +63,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="qty_product">Qty Product</label>
                                             <input type="text"
@@ -78,7 +78,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="model_name">Model Name</label>
                                             <input type="text"
@@ -89,7 +89,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="id_material">Material</label>
                                             <select name="id_material" id="id_material"
@@ -110,7 +110,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
 
                                         <div class="form-group">
                                             <label for="type_sample">Type Sample</label>
@@ -122,7 +122,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="id_submaterial">Jenis materaial</label>
                                             <select name="id_submaterial" id="id_submaterial"
@@ -138,7 +138,7 @@
 
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
 
                                         <div class="form-group">
                                             <label for="size">Size (ukuran)</label>
@@ -150,7 +150,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
 
                                         <div class="form-group">
                                             <label for="request">Ukuran request</label>
@@ -162,6 +162,23 @@
                                             </div>
                                         </div>
                                     </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-4">
+
+                                        <div class="form-group">
+                                            <label for="tgl_spk">Tanggal spk</label>
+                                            <input type="date"
+                                                class="form-control <?php echo form_error('tgl_spk') ? 'is-invalid' : '' ?>"
+                                                id="tgl_spk" name="tgl_spk">
+                                            <div class="invalid-feedback">
+                                                <?php echo form_error('tgl_spk') ?>
+                                            </div>
+                                        </div>
+                                    </div>
+
 
                                 </div>
 

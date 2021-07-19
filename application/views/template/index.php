@@ -126,7 +126,7 @@
                     <span>Material</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Material') ?>">
+                <a class="nav-link" href="<?= base_url('Users') ?>">
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>User</span></a>
             </li>

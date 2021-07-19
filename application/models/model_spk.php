@@ -10,6 +10,7 @@ class model_spk extends CI_Model
     public $size;
     public $code_product;
     public $qty_product;
+    public $tgl_spk;
 
     public function rules()
     {
@@ -17,8 +18,13 @@ class model_spk extends CI_Model
 
             [
                 'field' => 'bom_id',
-                'label' => 'bom_id',
-                'rules' => 'required'
+                'label' => 'bom id',
+                'rules' => 'required',
+                'errors' => [
+
+                    'required' => '%s harus diisi',
+                    'is_unique' => '%s bom id tidak boleh sama'
+                ],
             ],
             [
                 'field' => 'type_sample',
@@ -62,6 +68,11 @@ class model_spk extends CI_Model
                 'label' => 'request',
                 'rules' => 'required'
             ],
+            [
+                'field' => 'tgl_spk',
+                'label' => 'tanggal',
+                'rules' => 'required'
+            ],
         ];
     }
     public function Getby_idbom($bom_id)
@@ -94,6 +105,7 @@ class model_spk extends CI_Model
         $this->size = $post['size'];
         $this->code_product = $post['code_product'];
         $this->qty_product = $post['qty_product'];
+        $this->tgl_spk = $post['tgl_spk'];
 
 
         return $this->db->insert($this->_table, $this);

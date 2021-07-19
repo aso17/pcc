@@ -46,6 +46,14 @@ class model_material extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+    public function Get_not_in()
+    {
+        $index = $this->db->query(
+            "SELECT * FROM tb_material
+            WHERE id_material NOT IN( SELECT id_material FROM tb_detail_spk)"
+        );
+        return $index->result();
+    }
     public function get_byid($id_material)
     {
         $this->db->select('*');

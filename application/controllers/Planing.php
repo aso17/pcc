@@ -41,6 +41,17 @@ class Planing extends CI_Controller
             $post = $this->input->post();
             //tb_spk         
             $this->model_spk->insert($post);
+            $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
+
+
+
+
+            $id_submaterial = $post['id_submaterial'];
+            $ukuran = $this->model_submaterial->get_id($id_submaterial);
+            $nilai = $ukuran->ukuran;
+            $hasil = $nilai - $post['request'];
+            $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
+
             $idspk = $this->model_spk->orderby()->row();
             $idsp = $idspk->id_spk;
 
@@ -49,17 +60,18 @@ class Planing extends CI_Controller
             } else {
                 $idss = $idsp;
             }
+            $this->model_detail_spk->insert($post, $idss);
+            // $data['material'] = $this->model_material->GetAll();
 
-            $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
             $bom_id = $post['bom_id'];
             $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
 
-            $id_submaterial = $post['id_submaterial'];
-            $ukuran = $this->model_submaterial->get_id($id_submaterial);
-            $nilai = $ukuran->ukuran;
-            $hasil = $nilai - $post['request'];
-            $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
-            $this->model_detail_spk->insert($post, $idss);
+            $id_spk = $data['spk']->id_spk;
+
+            $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
+
+
+
             $data['material'] = $this->model_material->GetAll();
             $this->template->load('template/index', 'planing/create_next', $data);
         }
@@ -67,6 +79,8 @@ class Planing extends CI_Controller
     public function store_next()
     {
         $post = $this->input->post();
+
+
         $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
         $planing = $this->model_spk;
         $validation = $this->form_validation;
@@ -75,28 +89,32 @@ class Planing extends CI_Controller
             $data['material'] = $this->model_material->GetAll();
             $this->template->load('template/index', 'planing/create_next', $data);
         } else {
-            $post = $this->input->post();
-            $idspk = $this->model_spk->orderby()->row();
-            $idsp = $idspk->id_spk;
-            if (empty($idsp)) {
-                $idss = 1;
-            } else {
-                $idss = $idsp;
-            }
-        }
-        $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
-        $post = $this->input->post();
-        $bom_id = $post['bom_id'];
-        $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
-        $id_submaterial = $post['id_submaterial'];
-        $ukuran = $this->model_submaterial->get_id($id_submaterial);
-        $nilai = $ukuran->ukuran;
-        $hasil = $nilai - $post['request'];
-        $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
-        $this->model_detail_spk->insert($post, $idss);
-        $data['material'] = $this->model_material->GetAll();
 
-        $this->template->load('template/index', 'planing/create_next', $data);
+            $post = $this->input->post();
+            $id_spk = $post['id_spk'];
+            // $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
+
+            $bom_id = $post['bom_id'];
+            $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
+            $id_submaterial = $post['id_submaterial'];
+
+            $ukuran = $this->model_submaterial->get_id($id_submaterial);
+
+            $nilai = $ukuran->ukuran;
+            $hasil = $nilai - $post['request'];
+
+            $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
+
+            $this->model_detail_spk->insert_next($post, $id_spk);
+
+
+            $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
+
+            $data['material'] = $this->model_material->GetAll();
+
+
+            $this->template->load('template/index', 'planing/create_next', $data);
+        }
     }
     public function show($id_spk)
     {

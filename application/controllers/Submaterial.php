@@ -55,8 +55,7 @@ class Submaterial extends CI_Controller
     {
 
         $this->model_submaterial->delete($id_submaterial);
-        $this->session->set_flashdata('warning', 'Data Material dihapus');
-
+        $this->session->set_flashdata('info', 'Data Material dihapus');
         $id_ma = $id_material;
         redirect('submaterial/detail_material/' . $id_ma, 'refresh');
     }
