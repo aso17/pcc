@@ -107,6 +107,31 @@
             </li>
 
             <hr class="sidebar-divider">
+            <?php } elseif ($this->session->userdata('devisi') == 'IT sport') { ?>
+            <div class="sidebar-heading">
+                Workshop
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>SPB</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Menu:</h6>
+                        <a class="collapse-item" href="<?php echo base_url('Spb') ?>">Spb</a>
+                        <a class="collapse-item" href="<?php echo base_url('Spb/daftar') ?>">Daftar Spb</a>
+                        <a class="collapse-item" href="<?php echo base_url('Planing/proses') ?>">Peoses Spb</a>
+
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider">
+
             <?php } ?>
             <!-- Heading -->
             <?php if ($this->session->userdata('devisi') == 'development') { ?>
@@ -125,9 +150,28 @@
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>Material</span></a>
             </li>
-
-            <?php } ?>
-
+            <!-- workshop material -->
+            <?php } elseif ($this->session->userdata('devisi') == 'workshop') { ?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Material') ?>">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>Material</span></a>
+            </li>
+            <?php }  ?>
+            <!-- Administrator -->
+            <div class="sidebar-heading">
+                Warehouse
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Warehouse/daftarSpb') ?>">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>Approve</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Material') ?>">
+                    <i class="fas fa-fw fa-align-justify"></i>
+                    <span>Material</span></a>
+            </li>
 
             <?php if ($this->session->userdata('devisi') == 'IT sport') { ?>
 
@@ -165,8 +209,34 @@
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-            <?php } ?>
+            <?php } elseif ($this->session->userdata('devisi') == 'IT sport') { ?>
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Laporan
+            </div>
+            <!-- Nav Item - Pages Collapse Menu Laporan -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fa fa-file-alt"></i>
+                    <span>Laporan Periode</span>
+                </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Menu:</h6>
+                        <a class="collapse-item" href="<?php echo base_url('laporan/filter') ?>">Laporan Planing</a>
+                        <a class="collapse-item"
+                            href="<?php echo base_url('laporan_visitor/filter_lapvis') ?>">Pemakaian</a>
+                    </div>
+                </div>
+            </li>
 
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <?php } ?>
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>

@@ -10,6 +10,7 @@ class Planing extends CI_Controller
         $this->load->model('model_spb');
         $this->load->model('model_detail_spk');
         $this->load->model('model_proses');
+        check_not_login();
     }
     public function index()
     {

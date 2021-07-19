@@ -9,6 +9,7 @@ class Spb extends CI_Controller
         $this->load->model('model_material');
         $this->load->model('model_submaterial');
         $this->load->model('model_detail_spk');
+        check_not_login();
     }
     public function index()
     {

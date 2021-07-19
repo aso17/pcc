@@ -6,6 +6,7 @@ class Material extends CI_Controller
         parent::__construct();
         $this->load->model('model_material');
         $this->load->model('model_submaterial');
+        check_not_login();
     }
     public function get_sub()
     {
