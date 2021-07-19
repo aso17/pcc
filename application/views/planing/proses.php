@@ -22,8 +22,8 @@
                                 <th class="text-center">BOM ID</th>
                                 <th class="text-center">Model Name</th>
                                 <th class="text-center">Date Order</th>
-                                <th class="text-center">Date Submit</th>
-                                <th class="text-center">Status</th>
+                                <th class="text-center">tanggal approve</th>
+
                                 <th class="text-center" style="width: 15%;">Aksi</th>
                             </tr>
                         </thead>
@@ -37,14 +37,7 @@
                                 <td class="text-center"><?= $sp->model_name ?></td>
                                 <td class="text-center"><?= $sp->order_date ?></td>
                                 <td class="text-center"><?= $sp->submit_date ?></td>
-                                <td class="text-center"> <a
-                                        href="<?= base_url('Planing/prosesShow/' . $sp->id_spb) ?>"><button
-                                            type="button" class="btn btn-sm btn-dark">
-                                            <i class="fas fa-info "></i> <span class="badge badge-light">View
-                                                proses</button>
-                                        </span>
-                                        </button>
-                                    </a>
+
                                 <td class="text-right">
 
                                     <a href="<?php echo base_url('Planing/prosesCreate/' . $sp->id_spk) . '/' . $sp->id_spb ?>"

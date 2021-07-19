@@ -89,12 +89,11 @@ class model_spk extends CI_Model
     }
     public function GetAll_status_null()
     {
-        $this->db->select('*');
-        $this->db->from($this->_table);
-        $this->db->where(['status' => NULL]);
-        $this->db->order_by('tb_spk.id_spk', 'DESC');
-        $query = $this->db->get();
-        return $query->result();
+        $index = $this->db->query(
+            "SELECT * FROM tb_spk
+            WHERE id_spk NOT IN( SELECT id_spk FROM tb_spb)"
+        );
+        return $index->result();
     }
     public function insert($post)
     {

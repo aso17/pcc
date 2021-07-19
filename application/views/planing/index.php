@@ -28,6 +28,7 @@
                                 <th class="text-center">Type Sample</th>
                                 <th class="text-center">Model Name</th>
                                 <th class="text-center">Size</th>
+                                <th class="text-center">Tanggal Spk</th>
                                 <th class="text-center">Status</th>
                                 <th class="text-center">Aksi</th>
                             </tr>
@@ -42,10 +43,11 @@
                                 <td class="text-center"><?= $sp->type_sample ?></td>
                                 <td class="text-center"><?= $sp->model_name ?></td>
                                 <td class="text-center"><?= $sp->size ?></td>
+                                <td class="text-center"><?= $sp->tgl_spk ?></td>
                                 <td class="text-center">
                                     <?php if (!empty($sp->status)) { ?>
                                     <button type="button" class="btn btn-sm btn-dark text-dark">
-                                        <span class="badge badge-warning text-dark"><?= $sp->status ?></button>
+                                        <span class="badge badge-success text-dark"><?= $sp->status ?></button>
                                     </span>
                                     </button>
                                     <?php } else { ?>
