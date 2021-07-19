@@ -52,8 +52,35 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-            <?php if ($this->session->userdata('devisi') == 'planing' and 'IT sport') { ?>
+            <?php if ($this->session->userdata('devisi') == 'planing') { ?>
 
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Planing
+            </div>
+            <!-- Nav Item - Pages Collapse Menu -->
+
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-server"></i>
+                    <span>Planing</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Menu:</h6>
+
+                        <a class="collapse-item" href="<?php echo base_url('Planing') ?>">Spk</a>
+
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <?php } elseif ($this->session->userdata('devisi') == 'IT sport') { ?>
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Heading -->
@@ -152,12 +179,15 @@
             </li>
             <!-- workshop material -->
             <?php } elseif ($this->session->userdata('devisi') == 'workshop') { ?>
+            <div class="sidebar-heading">
+                Warehouse
+            </div>
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Material') ?>">
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>Material</span></a>
             </li>
-            <?php }  ?>
+            <?php } elseif ($this->session->userdata('devisi') == 'IT sport') { ?>
             <!-- Administrator -->
             <div class="sidebar-heading">
                 Warehouse
@@ -172,7 +202,7 @@
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>Material</span></a>
             </li>
-
+            <?php } ?>
             <?php if ($this->session->userdata('devisi') == 'IT sport') { ?>
 
 
@@ -300,7 +330,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                                 <span
-                                    class="font-weight-bold d-none d-lg-inline text-primary large"><?= $this->session->userdata('devisi') ?></span>
+                                    class="font-weight-bold d-none d-lg-inline text-primary large"><?= $this->session->userdata('nama') ?></span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
