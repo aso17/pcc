@@ -36,17 +36,17 @@
                                 <td class="text-center"><?= $sp->order_date ?></td>
                                 <td class="text-center">
                                     <?php if (empty($sp->submit_date)) { ?>
-                                    <span class="badge badge-info">pending</span>
+                                    <span class="badge badge-success">pending</span>
                                     <?php } ?>
                                     <?= $sp->submit_date ?>
                                 </td>
                                 <td class="text-center">
 
                                     <a href="<?= base_url('Spb/show/') . $sp->id_spk ?>">
-                                        <button class="btn btn-secondary btn-sm  "><i class="fas fa-eye"></i></button>
+                                        <button class="btn btn-success btn-sm  "><i class="fas fa-eye"></i></button>
                                     </a>
                                     <a onclick="deleteConfirm('<?= base_url('Planing/delete/') ?>')" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split  ml-2" data-toggle="tooltip"
+                                        class="btn btn-success btn-sm btn-icon-split  ml-2" data-toggle="tooltip"
                                         data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
                                             <i class="fas fa-trash"></i>

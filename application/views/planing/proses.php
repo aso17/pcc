@@ -8,7 +8,7 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Daftar SPB Proses</h6>
+                <h6 class="m-0 font-weight-bold text-dark">Daftar SPB Proses</h6>
 
             </div>
 
@@ -41,11 +41,11 @@
                                 <td class="text-right">
 
                                     <a href="<?php echo base_url('Planing/prosesCreate/' . $sp->id_spk) . '/' . $sp->id_spb ?>"
-                                        class="btn btn-warning btn-sm text-dark btn-icon-split float-right">
-                                        <span class="icon text-dark-50">
+                                        class="btn btn-success btn-sm text-dark btn-icon-split float-right">
+                                        <span class="icon text-light">
                                             <i class="fas fa-indent"></i>
                                         </span>
-                                        <span class="text"> Proses Spb </span></a>
+                                        <span class="text text-light"> Proses Spb </span></a>
 
                                 </td>
                             </tr>

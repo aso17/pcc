@@ -8,10 +8,10 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">DATA Material</h6>
-                <a href="<?php echo base_url('Material/create') ?>" class="btn btn-primary btn-icon-split">
+                <h6 class="m-0 font-weight-bold text-dark">DATA Material</h6>
+                <a href="<?php echo base_url('Material/create') ?>" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-plus text-success"></i>
                     </span>
                     <span class="text">Creat</span></a>
             </div>
@@ -39,19 +39,19 @@
                                 <td class="">
 
                                     <a onclick="deleteConfirm('<?= base_url('Material/delete/' . $mate->id_material) ?>')"
-                                        href="#!" class="btn btn-danger btn-sm btn-icon-split float-right mr-3"
+                                        href="#!" class="btn btn-success btn-sm btn-icon-split float-right mr-3"
                                         data-toggle="tooltip" data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="fas fa-trash "></i>
                                         </span></a>
                                     <a href="<?= base_url('Material/edit/' . $mate->id_material) ?>">
                                         <button class="btn btn-success btn-sm float-right mr-3"><i
-                                                class="fas fa-edit"></i></button>
+                                                class="fas fa-edit text-light"></i></button>
                                     </a>
                                     <a href="<?php echo base_url('Submaterial/detail_material/' . $mate->id_material) ?>"
-                                        class="btn btn-warning btn-sm text-dark btn-icon-split float-right mr-3">
+                                        class="btn btn-success btn-sm  text-light btn-icon-split float-right mr-3">
                                         <span class="icon text-white-50">
-                                            <i class="fas fa-plus text-dark"></i>
+                                            <i class="fas fa-plus text-success"></i>
                                         </span>
                                         <span class="text"> Sub material</span></a>
                                 </td>

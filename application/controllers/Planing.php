@@ -79,43 +79,43 @@ class Planing extends CI_Controller
     }
     public function store_next()
     {
+        // $post = $this->input->post();
+        // $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
+        // $planing = $this->model_detail_spk;
+        // $validation = $this->form_validation;
+        // $validation->set_rules($planing->rules());
+        // if ($validation->run() == 0) {
+        //     $id_spk = $post['id_spk'];
+        //     $data['spk'] = $this->model_spk->detail($id_spk);
+        //     $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
+        //     $data['material'] = $this->model_material->GetAll();
+        //     $this->template->load('template/index', 'planing/create_next', $data);
+        // } else {
+
         $post = $this->input->post();
+        $id_spk = $post['id_spk'];
+
+        $bom_id = $post['bom_id'];
+        $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
+        $id_submaterial = $post['id_submaterial'];
+
+        $ukuran = $this->model_submaterial->get_id($id_submaterial);
+
+        $nilai = $ukuran->ukuran;
+        $hasil = $nilai - $post['request'];
+
+        $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
+
+        $this->model_detail_spk->insert_next($post, $id_spk);
 
 
-        $this->form_validation->set_message('required', '%s Tidak Boleh Kosong!!!');
-        $planing = $this->model_spk;
-        $validation = $this->form_validation;
-        $validation->set_rules($planing->rules());
-        if ($validation->run() == 0) {
-            $data['material'] = $this->model_material->GetAll();
-            $this->template->load('template/index', 'planing/create_next', $data);
-        } else {
+        $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
 
-            $post = $this->input->post();
-            $id_spk = $post['id_spk'];
-            // $this->session->set_flashdata('success', 'Surat Perintah kerja telah ditambahkan');
-
-            $bom_id = $post['bom_id'];
-            $data['spk'] = $this->model_spk->Getby_idbom($bom_id);
-            $id_submaterial = $post['id_submaterial'];
-
-            $ukuran = $this->model_submaterial->get_id($id_submaterial);
-
-            $nilai = $ukuran->ukuran;
-            $hasil = $nilai - $post['request'];
-
-            $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
-
-            $this->model_detail_spk->insert_next($post, $id_spk);
+        $data['material'] = $this->model_material->GetAll();
 
 
-            $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
-
-            $data['material'] = $this->model_material->GetAll();
-
-
-            $this->template->load('template/index', 'planing/create_next', $data);
-        }
+        $this->template->load('template/index', 'planing/create_next', $data);
+        // }
     }
     public function show($id_spk)
     {

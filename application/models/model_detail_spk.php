@@ -7,6 +7,19 @@ class model_detail_spk extends CI_Model
     public $id_spk;
     public $jml_request;
 
+    public function rules()
+    {
+        return [
+
+
+
+            [
+                'field' => 'jml_request',
+                'label' => 'jumlah',
+                'rules' => 'required'
+            ]
+        ];
+    }
     public function Getby_idspk($id_spk)
     {
         $this->db->select('*');

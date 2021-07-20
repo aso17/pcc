@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="card card-primary">
-                        <div class="card-header bg-dark text-light ">
+                        <div class="card-header bg-success text-light ">
                             <h5><i class="fas fa-edit"> Form Proses Permintaan barang (SPB)</i></h5>
                         </div>
                         <!-- /.card-header -->
@@ -18,7 +18,7 @@
                         <form method="post" action="<?= base_url('Spb/store') ?>">
                             <input type="hidden" name="id_spk" value="<?= $spk->id_spk ?>">
                             <div class="card-body">
-                                <div class="row bg-secondary text-light font-weight-bold">
+                                <div class="row bg-light text-dark font-weight-bold">
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="bom_id">Bom Id</label>
@@ -57,7 +57,7 @@
 
 
                                 </div>
-                                <div class="row bg-secondary text-light font-weight-bold">
+                                <div class="row bg-light text-dark font-weight-bold">
                                     <div class="col-md-4">
 
                                         <div class="form-group">
@@ -98,7 +98,7 @@
                                 </div>
 
 
-                                <div class="row mt-2 bg-secondary text-light font-weight-boldk">
+                                <div class="row mt-2 bg-light text-dark font-weight-boldk">
                                     <?php foreach ($detail_spk as $m) : ?>
 
                                     <input type="hidden" name="id_material[]" value="<?= $m->id_submaterial ?>">
@@ -119,7 +119,7 @@
 
 
                                 </div>
-                                <div class="row mt-2 bg-warning font-weight-bold text-dark">
+                                <div class="row mt-2 bg-light font-weight-bold text-dark">
 
                                     <div class="col-md-4">
                                         <div class="form-group ">
@@ -152,10 +152,10 @@
 
                                     <div class="card-footer">
                                         <a href="<?php echo base_url('Spb') ?>"
-                                            class="btn btn-danger btn-icon-split btn-sm float-right"
+                                            class="btn btn-success btn-icon-split btn-sm float-right"
                                             style="margin-bottom: 5px;"><span class="icon text-white-5">
                                                 <i class="fas fa-arrow-circle-left"></i></span>
-                                            <span class="font-weight-bold text">Back</span></a>
+                                            <span class="font-weight-bold text text-danger">Back</span></a>
                                         <button type="submit" class="btn btn-success btn-icon-split btn-sm float-right"
                                             style="margin-right: 5px;"><span class="icon text-white-5">
                                                 <i class="fas fa-save"></i></span>

@@ -1,5 +1,5 @@
 <!-- Content Header (Page header) -->
-<div class="content-header">
+<div class="content-header bg-light">
 
     <!-- Main content -->
     <section class="content">
@@ -104,13 +104,13 @@
 
                             <div class="card-footer">
                                 <a href="<?php echo base_url('Users') ?>"
-                                    class="btn btn-primary btn-icon-split btn-sm float-right"
+                                    class="btn btn-success btn-icon-split btn-sm float-right"
                                     style="margin-bottom: 5px;"><span class="icon text-white-5">
-                                        <i class="fas fa-arrow-circle-left"></i></span>
-                                    <span class="font-weight-bold text">Back</span></a>
+                                        <i class="fas fa-arrow-circle-left "></i></span>
+                                    <span class="font-weight-bold text text-danger">Back</span></a>
                                 <button type="submit" class="btn btn-success btn-icon-split btn-sm float-right"
                                     style="margin-right: 5px;"><span class="icon text-white-5">
-                                        <i class="fas fa-save"></i></span>
+                                        <i class="fas fa-save text-success"></i></span>
                                     <span class="font-weight-bold text">Save</span></a></button>
                             </div>
                         </form>

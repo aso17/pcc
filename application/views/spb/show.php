@@ -8,14 +8,14 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Data detail Planing </h6>
+                <h6 class="m-0 font-weight-bold text-dark">Data detail Planing </h6>
 
             </div>
 
 
             <div class="card-body">
-                <h6 class="m-0 mb-2">Tanggal Request barang : <input type="text" value="<?= $spb->order_date ?>"
-                        disabled> </h6>
+                <h6 class="m-0 mb-2 text-success font-weight-bold">Tanggal Request barang : <input type="text"
+                        value="<?= $spb->order_date ?>" disabled class="bg-success text-light"> </h6>
                 <div class="table table-responsive">
                     <table class="table table-sm" cellspacing="0">
                         <thead>
@@ -59,7 +59,7 @@
 
 
                     <div class="card-header bg-light">
-                        <h6 class="m-0 font-weight-bold text-primary">Jenis Material yang dipakai</h6>
+                        <h6 class="m-0 font-weight-bold text-dark">Jenis Material yang dipakai</h6>
 
                     </div>
                     <div class="card-body">
@@ -103,10 +103,10 @@
 
                     <div class="card-footer">
                         <a href="<?php echo base_url('Spb/daftar') ?>"
-                            class="btn btn-danger btn-icon-split btn-sm float-right" style="margin-bottom: 5px;"><span
+                            class="btn btn-success btn-icon-split btn-sm float-right" style="margin-bottom: 5px;"><span
                                 class="icon text-white-5">
                                 <i class="fas fa-arrow-circle-left"></i></span>
-                            <span class="font-weight-bold text">Back</span></a>
+                            <span class="font-weight-bold text text-danger">Back</span></a>
 
                     </div>
                 </div>

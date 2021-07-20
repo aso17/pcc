@@ -25,7 +25,10 @@
     <div class="container-fluid">
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-center mb-4">
-            <h1 class="h4 mb-0 font-weight-bold text-gray-800 text-uppercase mb-1">PT. ADIS DIMENSION FOOWEAR</h1>
+            <marquee behavior="" direction="">
+                <h1 class="h4 mb-0 font-weight-bold text-success text-uppercase mb-1">PT. ADIS DIMENSION
+                    FOOWEAR</h1>
+            </marquee>
         </div>
 
         <!-- Content Row -->
@@ -33,18 +36,18 @@
 
             <!-- Pelanggaran Ringan -->
             <div class="col-xl-4 col-md-5 mb-4">
-                <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="h6 mb-0 font-weight-bold text-grey-800 text-uppercase mb-1">VISI</div>
-                                <div class="text-xs font-weight-bold text-primary">
+                                <div class="text-xs font-weight-bold text-success">
                                     <a class="button" data-toggle="modal" data-target="#modal-ringan">
-                                        <span class="font-weight-bold">Descriptions</span></a>
+                                        <span class="font-weight-bold text-success">Descriptions</span></a>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-book fa-2x text-gray-300"></i>
+                                <i class="fas fa-book fa-2x text-success"></i>
                             </div>
                         </div>
                     </div>
@@ -54,7 +57,7 @@
             <div class="modal fade" id="modal-ringan" tabindex="-1" data-bs-keyboard="false"
                 aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-lg">
-                    <div class="modal-content bg-primary text-light">
+                    <div class="modal-content bg-success text-light">
                         <div class="modal-body">
                             <h3 class="font-weight-bold">Visi PT. Adis Dimension footwear</h3>
                             <p class="page1">Menjadi perusahaan yang bereputasi tinggi dan berkelanjutan melalui
@@ -69,18 +72,18 @@
             <!-- Pelanggaran Sedang -->
 
             <div class="col-xl-4 col-md-5 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="h6 mb-0 font-weight-bold text-grey-800 text-uppercase mb-1">MISI</div>
-                                <div class=" text-xs font-weight-bold text-primary">
+                                <div class=" text-xs font-weight-bold text-success">
                                     <a class="button" data-toggle="modal" data-target="#modal-sedang">
-                                        <span class="font-weight-bold">Description</span></a>
+                                        <span class="font-weight-bold text-success">Description</span></a>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-book fa-2x text-gray-300"></i>
+                                <i class="fas fa-book fa-2x text-success"></i>
                             </div>
                         </div>
                     </div>
@@ -90,7 +93,7 @@
             <div class="modal fade" id="modal-sedang" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-scrollable modal-lg">
                     <div class="modal-content">
-                        <div class="modal-body bg-primary text-light">
+                        <div class="modal-body bg-success text-light">
                             <h3 class="font-weight-bold">Misi PT. Adis Dimension footwear</h3>
                             <p>1.Always work to create premium products.
                                 Senantiasa <br> bekerja untuk menciptakan produk unggulan.</p>
@@ -109,18 +112,18 @@
             </div>
             <!-- Pelanggaran Berat -->
             <div class="col-xl-4 col-md-5 mb-4">
-                <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
                                 <div class="h6 mb-0 font-weight-bold text-grey-800 text-uppercase mb-1">MOTO</div>
-                                <div class=" text-xs font-weight-bold text-primary">
+                                <div class=" text-xs font-weight-bold text-success">
                                     <a class="button" data-toggle="modal" data-target="#modal-berat">
-                                        <span class="font-weight-bold">Descrption</span></a>
+                                        <span class="font-weight-bold text-success">Descrption</span></a>
                                 </div>
                             </div>
                             <div class="col-auto">
-                                <i class="fas fa-book fa-2x text-gray-300"></i>
+                                <i class="fas fa-book fa-2x text-success"></i>
                             </div>
                         </div>
                     </div>
@@ -130,7 +133,7 @@
             <div class="modal fade" id="modal-berat" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                 <div class="modal-dialog  modal-dialog-scrollable modal-lg">
                     <div class="modal-content ">
-                        <div class="modal-body bg-primary text-light">
+                        <div class="modal-body bg-success text-light">
                             <h3 class="font-weight-bold">Moto PT. Adis Dimension footwear</h3>
                             <p>ADIS NICE SUPER AGILE</p>
 

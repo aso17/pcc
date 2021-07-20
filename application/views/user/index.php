@@ -7,11 +7,11 @@
         <!-- DataTales Example -->
         <div class="card shadow">
             <!-- Card Header - Dropdown -->
-            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-secondary">
-                <h6 class="m-0 font-weight-bold text-light">Data User</h6>
-                <a href="<?php echo base_url('Users/create') ?>" class="btn btn-primary btn-icon-split">
+            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between bg-light">
+                <h6 class="m-0 font-weight-bold text-dark">Data User</h6>
+                <a href="<?php echo base_url('Users/create') ?>" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
-                        <i class="fas fa-plus"></i>
+                        <i class="fas fa-plus text-success"></i>
                     </span>
                     <span class="text">Creat User</span></a>
             </div>
@@ -42,14 +42,14 @@
                                 <td class=""><?= $use->devisi ?></td>
                                 <td class="">
                                     <a onclick="deleteConfirm('<?= base_url('User/delete/') ?>" href="#!"
-                                        class="btn btn-danger btn-sm btn-icon-split float-right  mr-1"
+                                        class="btn btn-success btn-sm btn-icon-split float-right  mr-1"
                                         data-toggle="tooltip" data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="fas fa-trash text-light"></i>
                                         </span></a>
                                     <a href="<?= base_url('User/edit/') ?>">
                                         <button class="btn btn-success btn-sm float-right mr-2 "><i
-                                                class="fas fa-edit"></i></button>
+                                                class="fas fa-edit text-light"></i></button>
                                     </a>
 
                                 </td>

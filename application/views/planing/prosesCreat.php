@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="card card-primary">
-                        <div class="card-header bg-secondary text-light ">
+                        <div class="card-header bg-light text-dark ">
                             <h5><i class="fas fa-edit"> Form Proses Planing (SPB)</i></h5>
                         </div>
                         <!-- /.card-header -->
@@ -21,18 +21,18 @@
                             <div class="card-body">
                                 <div class="row mb-2 ">
                                     <div class="col-md-4">
-                                        <td class="text-dark font-bold mb-2">Date Order: <input type="text"
-                                                value="<?= $spb->order_date ?>" disabled>
+                                        <td class="text-light bg-success font-bold mb-2">Tanggal Request: <input
+                                                type="text" value="<?= $spb->order_date ?>" disabled>
                                         </td>
                                     </div>
                                     <div class="col-md-4  ">
-                                        <td>Date Submit: <input type="text" value="<?= $spb->order_date ?>" disabled>
+                                        <td>Tanggal submit: <input type="text" value="<?= $spb->order_date ?>" disabled>
                                         </td>
                                     </div>
                                     <?php if (!empty($proses->nama_proses)) { ?>
                                     <div class="col-md-4">
                                         <td class="float-right">Status: <input type="text"
-                                                class="bg-danger text-light font-weight-bold"
+                                                class="bg-success text-light font-weight-bold"
                                                 value="<?= $proses->nama_proses ?>" disabled>
                                         </td>
                                     </div>
@@ -42,7 +42,7 @@
                                     <?php } ?>
                                 </div>
 
-                                <div class=" row bg-secondary text-light font-weight-bold">
+                                <div class=" row bg-light text-dark font-weight-bold">
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label for="bom_id">Bom Id</label>
@@ -81,7 +81,7 @@
 
 
                                 </div>
-                                <div class="row bg-secondary text-light font-weight-bold">
+                                <div class="row bg-light text-dark font-weight-bold">
                                     <div class="col-md-4">
 
                                         <div class="form-group">
@@ -122,7 +122,7 @@
                                 </div>
 
 
-                                <div class="row mt-2 bg-secondary text-light font-weight-boldk">
+                                <div class="row mt-2 bg-light text-dark font-weight-boldk">
                                     <?php foreach ($detail_spk as $m) : ?>
 
                                     <input type="hidden" name="id_material[]" value="<?= $m->id_submaterial ?>">
@@ -143,7 +143,7 @@
 
 
                                 </div>
-                                <div class="row mt-2 bg-warning font-weight-bold text-dark">
+                                <div class="row mt-2 bg-light font-weight-bold ">
 
                                     <div class="col-md-4">
 
@@ -196,10 +196,10 @@
 
                                     <div class="card-footer">
                                         <a href="<?php echo base_url('Planing/proses') ?>"
-                                            class="btn btn-dark btn-icon-split btn-sm float-right"
+                                            class="btn btn-success btn-icon-split btn-sm float-right"
                                             style="margin-bottom: 5px;"><span class="icon text-white-5">
                                                 <i class="fas fa-arrow-circle-left"></i></span>
-                                            <span class="font-weight-bold text">Back</span></a>
+                                            <span class="font-weight-bold text text-danger">Back</span></a>
                                         <button type="submit" class="btn btn-success btn-icon-split btn-sm float-right"
                                             style="margin-right: 5px;"><span class="icon text-white-5">
                                                 <i class="fas fa-save"></i></span>

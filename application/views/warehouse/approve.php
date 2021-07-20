@@ -5,9 +5,9 @@
     <!-- left column -->
     <div class="col-md">
         <!-- DataTales Example -->
-        <div class="card shadow mb-4 bg-dark">
+        <div class="card shadow mb-4 bg-light text-dark">
             <!-- Card Header - Dropdown -->
-            <div class="card-header py-3 d-flex  bg-primary flex-row align-items-center justify-content-between">
+            <div class="card-header py-3 d-flex  bg-success flex-row align-items-center justify-content-between">
                 <h5 class="m-0 font-weight-bold text-light">Data Spb (Surat Permintaan Barang)</h5>
 
             </div>
@@ -15,9 +15,9 @@
 
             <div class="card-body font-weight-bold">
                 <div class="table table-responsive">
-                    <table class="table table-sm text-light " cellspacing="0">
+                    <table class="table table-sm text-dark " cellspacing="0">
                         <thead>
-                            <tr class=" border bg-dark ">
+                            <tr class=" border ">
 
                                 <th class="text-center">BOM ID</th>
                                 <th class="text-center">Kategori</th>
@@ -53,7 +53,7 @@
 
                     <div class="card-body bg-light">
                         <div class="card-header">
-                            <h6 class="m-0 font-weight-bold text-primary">Jenis Material yang diminta</h6>
+                            <h6 class="m-0 font-weight-bold text-dark">Jenis Material yang diminta</h6>
 
                         </div>
                         <div class="table table-responsive">
@@ -84,19 +84,19 @@
                             </table>
                         </div>
                     </div>
-                    <button class="btn btn-sm btn-primary float-right mb-2" id="approve" data-toggle="modal"
+                    <button class="btn btn-sm btn-success float-right mb-2" id="approve" data-toggle="modal"
                         data-target="#modal_approve">Approve</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md">
 
-                    <div class="card-footer bg-dark ">
+                    <div class="card-footer">
                         <a href="<?php echo base_url('Warehouse/daftarSpb') ?>"
-                            class="btn btn-danger btn-icon-split btn-sm float-right" style="margin-bottom: 5px;"><span
+                            class="btn btn-success btn-icon-split btn-sm float-right" style="margin-bottom: 5px;"><span
                                 class="icon text-white-5">
                                 <i class="fas fa-arrow-circle-left"></i></span>
-                            <span class="font-weight-bold text">Back</span></a>
+                            <span class="font-weight-bold text text-danger">Back</span></a>
 
                     </div>
                 </div>
@@ -108,7 +108,7 @@
 <!-- approve Modal-->
 <div class="modal fade" id="modal_approve">
     <div class="modal-dialog">
-        <div class="modal-content bg-dark">
+        <div class="modal-content bg-success">
             <div class="modal-header">
                 <h4 class="modal-title text-light" id="exampleModalLabel">Form Konfirmasi</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -121,7 +121,7 @@
                     <div class="form-group text-light">
                         <label for="submit_date">Tanggal konfirmasi</label>
                         <input type="date"
-                            class="form-control <?php echo form_error('submit_date') ? 'is-invalid' : '' ?>"
+                            class="form-control <?php echo form_error('submit_date') ? 'is-invalid' : '' ?> bg-light"
                             id="submit_date" name="submit_date">
                         <div class="invalid-feedback">
                             <?php echo form_error('submit_date') ?>

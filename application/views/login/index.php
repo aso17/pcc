@@ -21,7 +21,7 @@
 </head>
 
 
-<body class="bg-gradient-primary">
+<body class="bg-gradient-success">
     <div class="container">
         <!-- Outer Row -->
         <div class="row justify-content-center">
@@ -54,7 +54,7 @@
                                                 placeholder="Masukkan Password " name="password">
                                             <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
-                                        <button type="submit" class="btn btn-primary form-control">Login</button>
+                                        <button type="submit" class="btn btn-success form-control">Login</button>
                                     </form>
                                 </div>
                             </div>

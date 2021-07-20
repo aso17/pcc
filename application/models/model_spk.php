@@ -19,7 +19,7 @@ class model_spk extends CI_Model
             [
                 'field' => 'bom_id',
                 'label' => 'bom id',
-                'rules' => 'required',
+                'rules' => 'required|is_unique[tb_spk.bom_id]',
                 'errors' => [
 
                     'required' => '%s harus diisi',
@@ -51,7 +51,12 @@ class model_spk extends CI_Model
             [
                 'field' => 'code_product',
                 'label' => 'code_product',
-                'rules' => 'required'
+                'rules' => 'required|is_unique[tb_spk.code_product]',
+                'errors' => [
+
+                    'required' => '%s harus diisi',
+                    'is_unique' => '%s code produc tidak boleh sama'
+                ],
             ],
             [
                 'field' => 'qty_product',
@@ -77,7 +82,11 @@ class model_spk extends CI_Model
     }
     public function Getby_idbom($bom_id)
     {
-        return $this->db->get_where($this->_table, ['bom_id' => $bom_id])->row();
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->where('bom_id', $bom_id);
+        $query = $this->db->get();
+        return $query->row();
     }
     public function GetAll()
     {

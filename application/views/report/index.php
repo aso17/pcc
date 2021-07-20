@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-secondary btn-sm float-right" type="submit">preview</button>
+                            <button class="btn btn-success btn-sm float-right" type="submit">preview</button>
                         </div>
                     </div>
                 </form>

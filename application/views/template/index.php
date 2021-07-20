@@ -33,7 +33,8 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar font-weight-bold sidebar-dark accordion"
+            id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard">
@@ -281,7 +282,7 @@
 
                 <!-- Topbar -->
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light bg-success text-light topbar mb-4 static-top shadow">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -298,7 +299,7 @@
                     </form>
 
                     <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto ">
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -328,7 +329,7 @@
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                                 <span
-                                    class="font-weight-bold d-none d-lg-inline text-primary large"><?= $this->session->userdata('nama') ?></span>
+                                    class="font-weight-bold d-none d-lg-inline text-light large"><?= $this->session->userdata('nama') ?></span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -385,7 +386,7 @@
             <!-- Logout Modal-->
             <div class="modal fade" id="logoutModal">
                 <div class="modal-dialog">
-                    <div class="modal-content bg-primary">
+                    <div class="modal-content bg-success">
                         <div class="modal-header">
                             <h4 class="modal-title text-light" id="exampleModalLabel">Yakin Ingin Keluar?</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">

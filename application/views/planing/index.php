@@ -8,8 +8,8 @@
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">DATA PLANING</h6>
-                <a href="<?php echo base_url('Planing/create') ?>" class="btn btn-primary btn-icon-split">
+                <h6 class="m-0 font-weight-bold text-dark">DATA PLANING</h6>
+                <a href="<?php echo base_url('Planing/create') ?>" class="btn btn-success btn-icon-split">
                     <span class="icon text-white-50">
                         <i class="fas fa-plus"></i>
                     </span>
@@ -47,15 +47,15 @@
                                 <td class="text-center">
                                     <?php if (!empty($sp->status)) { ?>
                                     <a href="<?= base_url('Planing/detailProses/' . $sp->id_spk)  ?>">
-                                        <button type="button" class="btn btn-sm btn-dark ">
-                                            <span class="badge badge-info text-dark"><?= $sp->status ?>
+                                        <button type="button" class="btn btn-sm btn-success ">
+                                            <span class="badge badge-warning text-dark"><?= $sp->status ?>
                                             </span>
                                             <span class="text-light"><i class="fas fa-eye"></i>
                                             </span>
                                         </button>
                                     </a>
                                     <?php } else { ?>
-                                    <button type="button" class="btn btn-sm btn-dark text-dark">
+                                    <button type="button" class="btn btn-sm btn-success text-dark">
                                         <span class="badge badge-warning text-dark">Null</button>
                                     </span>
                                     </button>
@@ -64,17 +64,16 @@
                                 </td>
                                 <td class="text-center">
                                     <a href="<?= base_url('Planing/show/') . $sp->id_spk ?>">
-                                        <button class="btn btn-secondary btn-sm mx-1 "><i
-                                                class="fas fa-eye"></i></button>
+                                        <button class="btn btn-success btn-sm mx-1 "><i class="fas fa-eye"></i></button>
                                     </a>
                                     <a href="<?= base_url('Planing/edit/' . $sp->id_spk) ?>">
                                         <button class="btn btn-success btn-sm mx-1"><i class="fas fa-edit"></i></button>
                                     </a>
                                     <a onclick="deleteConfirm('<?= base_url('Planing/delete/' . $sp->id_spk) ?>')"
-                                        href="#!" class="btn btn-danger btn-sm btn-icon-split mx-1"
+                                        href="#!" class="btn btn-success btn-sm btn-icon-split mx-1"
                                         data-toggle="tooltip" data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
-                                            <i class="fas fa-trash"></i>
+                                            <i class="fas fa-trash text-light"></i>
                                         </span></a>
                                 </td>
                             </tr>
