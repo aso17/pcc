@@ -124,7 +124,30 @@ class Planing extends CI_Controller
         $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
         $this->template->load('template/index', 'planing/show', $data);
     }
+    public function edit($id_spk)
+    {
+        $data['spk'] = $this->model_spk->detail($id_spk);
+        $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
+        $data['material'] = $this->model_material->GetAll();
 
+        $this->template->load('template/index', 'planing/edit', $data);
+    }
+
+    public function update()
+    {
+        $post = $this->input->post();
+        $id_submaterial = $post['id_submaterial'];
+        $ukuran = $this->model_submaterial->get_id($id_submaterial);
+        // updateukuran
+        $nilai = $ukuran->ukuran;
+        $hasil = $nilai - $post['request'];
+        $this->model_submaterial->update_ukuran($id_submaterial, $hasil);
+
+        $this->model_spk->update($post);
+        $this->model_detail_spk->update($post);
+        $this->session->set_flashdata('info', 'Planing telah diubah');
+        redirect('Planing/edit/' . $post['id_spk']);
+    }
     public function proses()
     {
 

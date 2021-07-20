@@ -67,7 +67,7 @@
                                         <button class="btn btn-secondary btn-sm mx-1 "><i
                                                 class="fas fa-eye"></i></button>
                                     </a>
-                                    <a href="http://">
+                                    <a href="<?= base_url('Planing/edit/' . $sp->id_spk) ?>">
                                         <button class="btn btn-success btn-sm mx-1"><i class="fas fa-edit"></i></button>
                                     </a>
                                     <a onclick="deleteConfirm('<?= base_url('Planing/delete/' . $sp->id_spk) ?>')"

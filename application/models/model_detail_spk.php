@@ -80,4 +80,22 @@ class model_detail_spk extends CI_Model
         $this->db->where('id_spk', $id_spk);
         $this->db->delete($this->_table);
     }
+
+    public function update($post)
+    {
+
+        $id_spk = $post['id_spk'];
+        $id_material = $post['id_material'];
+        $id_submaterial = $post['id_submaterial'];
+        $data = [
+
+            "id_material" => $post['id_material'],
+            "id_submaterial" => $post['id_submaterial'],
+            "jml_request" => $post['request']
+        ];
+        $this->db->or_Where('id_material', $id_material);
+        $this->db->where('id_submaterial', $id_submaterial);
+        $this->db->where('id_spk', $id_spk);
+        $this->db->update('tb_detail_spk', $data);
+    }
 }

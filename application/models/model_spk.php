@@ -118,6 +118,7 @@ class model_spk extends CI_Model
     {
         $this->db->select('*');
         $this->db->from($this->_table);
+        $this->db->join('tb_detail_spk', 'tb_detail_spk.id_spk=tb_spk.id_spk');
         $this->db->where('tb_spk.id_spk', $id_spk);
         $query = $this->db->get();
         return $query->row();
@@ -136,5 +137,21 @@ class model_spk extends CI_Model
     {
         $this->db->where('id_spk', $id_spk);
         $this->db->delete($this->_table);
+    }
+
+    public function update($post)
+    {
+        $id_spk = $post['id_spk'];
+        $data = [
+            "bom_id" => $post['bom_id'],
+            "type_sample" => $post['type_sample'],
+            "kategori" => $post['kategori'],
+            "model_name" => $post['model_name'],
+            "size" => $post['bom_id'],
+            "qty_product" => $post['qty_product'],
+            "tgl_spk" => $post['tgl_spk']
+        ];
+        $this->db->where('id_spk', $id_spk);
+        $this->db->update('tb_spk', $data);
     }
 }
