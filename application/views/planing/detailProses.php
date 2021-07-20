@@ -1,9 +1,9 @@
 <!-- Main content -->
 
 
-<div class="row">
+<div class="row ">
     <!-- left column -->
-    <div class="col-md">
+    <div class="col-md ">
         <!-- DataTales Example -->
         <div class="card shadow mb-4 ">
             <!-- Card Header - Dropdown -->
@@ -43,14 +43,13 @@
                     </table>
                 </div>
             </div>
-            <div class="row  ">
-                <div class="col-md-10 ml-2">
-                    <div class="card-header">
-                        <h6 class="m-0 font-weight-bold text-primary">Proses yang sedang berlangsung</h6>
-                    </div>
-                    <div class="card-body">
+            <div class="row bg-danger mx-0 pb-2 ">
+                <div class="col-md-10 ml-2 bg-dark">
+
+                    <div class="card-body ">
                     </div>
                     <div class="table table-responsive">
+                        <h5 class="m-0 font-weight-bold text-light mb-2 ml-2">Proses yang sedang berlangsung</h5>
                         <table class="table table-sm  bg-secondary text-light" cellspacing="0">
                             <thead>
                                 <tr>
