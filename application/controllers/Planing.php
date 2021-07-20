@@ -166,4 +166,22 @@ class Planing extends CI_Controller
             $this->template->load('template/index', 'planing/prosesCreat', $data);
         }
     }
+
+
+    public function delete($id_spk)
+    {
+        $this->model_spk->delete($id_spk);
+        $this->model_detail_spk->delete($id_spk);
+
+        $this->session->set_flashdata('info', 'Surat Perintah kerja telah dihapus');
+
+        redirect('Planing');
+    }
+
+    public function detailProses($id_spk)
+    {
+        $data['spk'] = $this->model_spk->detail($id_spk);
+        $data['detail_proses'] = $this->model_spb->detailP($id_spk);
+        $this->template->load('template/index', 'planing/detailProses', $data);
+    }
 }

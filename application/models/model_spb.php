@@ -93,4 +93,16 @@ class model_spb extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function detailP($id_spk)
+    {
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->join('tb_spk', 'tb_spk.id_spk=tb_spb.id_spk', 'left');
+        $this->db->join('tb_proses', 'tb_proses.id_spb=tb_spb.id_spb', 'left');
+        $this->db->where('tb_spb.id_spk', $id_spk);
+        // $this->db->group_by('tb_spb.id_sp', 'ASC');
+        $query = $this->db->get();
+        return $query->result();
+    }
 }

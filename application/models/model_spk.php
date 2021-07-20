@@ -132,4 +132,9 @@ class model_spk extends CI_Model
         $this->db->where('id_spk', $id_spk);
         $this->db->update('tb_spk', $data);
     }
+    public function delete($id_spk)
+    {
+        $this->db->where('id_spk', $id_spk);
+        $this->db->delete($this->_table);
+    }
 }
