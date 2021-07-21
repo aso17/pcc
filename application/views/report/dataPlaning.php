@@ -58,8 +58,11 @@
                                 <td class="text-center" style="width: 150px;"><?= $sp->model_name ?></td>
                                 <td class="text-center" style="width: 150px;"><?= $sp->size ?></td>
                                 <td class="text-center" style="width: 150px;"><?= $sp->tgl_spk ?></td>
+                                <?php if ($sp->status == null) { ?>
+                                <td class="text-center" style="width: 150px;">Null</td>
+                                <?php } else { ?>
                                 <td class="text-center" style="width: 150px;"><?= $sp->status ?></td>
-
+                                <?php } ?>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
