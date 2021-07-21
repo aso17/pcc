@@ -9,14 +9,16 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
-            <div class=" card-header">
+            <div class=" card-header" style="margin: 0%;">
                 <h7 class="m-0 font-weight-bold text-dark text-center mt-1">PT. ADIS DIMENSION
                     FOOWEAR</h7>
-                <h5 class="m-0  text-dark text-center " style="text-align: center; margin-top:0">DATA PLANING</h5>
+                <h5 class="m-0  text-dark text-center " style="text-align: center; margin-top:0%">DATA PLANING</h5>
                 <p class="m-0  text-dark text-center " style="text-align: center; margin-top:0px">Tanggal</p>
                 <p class="m-0  text-dark text-center " style="text-align: center; margin-top:0px"><?= $tgl_awal ?></p>
                 <p class="m-0  text-dark text-center " style="text-align: center; margin-top:0">s/d</p>
                 <p class="m-0  text-dark text-center " style="text-align: center; margin-top:0"><?= $tgl_ahir ?></p>
+                <p class="   " style="text-align:right; margin-top:0;margin-right:1%;margin:1%">User :
+                    <?= $this->session->userdata('username') ?></p>
                 <p class="m-0  text-dark text-right " style="text-align:right; margin-top:0">Tanggal cetak :
                     <?= date('d/m/y') ?></p>
 
