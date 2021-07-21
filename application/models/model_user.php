@@ -98,4 +98,31 @@ class model_user extends CI_Model
         $this->password = password_hash($post['password'], PASSWORD_BCRYPT);
         return $this->db->insert($this->_table, $this);
     }
+    public function getBy_id($id_user)
+    {
+
+        return $this->db->get_where($this->_table, ['id_user' => $id_user])->row();
+    }
+
+    public function update($post)
+    {
+        $data = [
+            "nikKaryawan" => $post['nikKaryawan'],
+            "namaLengkap" => $post['namaLengkap'],
+            "departemen" => $post['departemen'],
+            "devisi" => $post['devisi'],
+            "username" => $post['username'],
+            "password" => password_hash($post['password'], PASSWORD_BCRYPT)
+        ];
+        $this->db->where('id_user', $post['id_user']);
+        $this->db->update('tb_user', $data);
+    }
+
+
+
+    public function delete($id_user)
+    {
+        $this->db->where('id_user', $id_user);
+        $this->db->delete($this->_table);
+    }
 }

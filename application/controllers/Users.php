@@ -32,4 +32,26 @@ class Users extends CI_Controller
             redirect('Users', 'refresh');
         }
     }
+
+    public function edit($id_user)
+    {
+        $data['user'] = $this->model_user->getBy_id($id_user);
+        $this->template->load('template/index', 'user/edit', $data);
+    }
+
+    public function update()
+    {
+        $post = $this->input->post();
+        $this->model_user->update($post);
+
+        $this->session->set_flashdata('info', 'Data User telah diubah');
+        redirect('Users', 'refresh');
+    }
+
+    public function delete($id_user)
+    {
+        $this->model_user->delete($id_user);
+        $this->session->set_flashdata('info', 'Data User telah dihapus');
+        redirect('Users', 'refresh');
+    }
 }

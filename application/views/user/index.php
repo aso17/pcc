@@ -41,13 +41,16 @@
                                 <td class=""><?= $use->departemen ?></td>
                                 <td class=""><?= $use->devisi ?></td>
                                 <td class="">
-                                    <a onclick="deleteConfirm('<?= base_url('User/delete/') ?>" href="#!"
-                                        class="btn btn-success btn-sm btn-icon-split float-right  mr-1"
+                                    <a onclick="deleteConfirm('<?= base_url('Users/delete/' . $use->id_user) ?>')"
+                                        href="#!" class="btn btn-success btn-sm btn-icon-split  float-right mr-3"
                                         data-toggle="tooltip" data-placement="top" title="Delete">
                                         <span class="icon text-white-5">
-                                            <i class="fas fa-trash text-light"></i>
+                                            <i class="fas fa-trash"></i>
                                         </span></a>
-                                    <a href="<?= base_url('User/edit/') ?>">
+
+
+
+                                    <a href="<?= base_url('Users/edit/' . $use->id_user) ?>">
                                         <button class="btn btn-success btn-sm float-right mr-2 "><i
                                                 class="fas fa-edit text-light"></i></button>
                                     </a>

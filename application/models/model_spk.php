@@ -163,4 +163,18 @@ class model_spk extends CI_Model
         $this->db->where('id_spk', $id_spk);
         $this->db->update('tb_spk', $data);
     }
+
+
+    public function filter($tgl_awal, $tgl_ahir)
+    {
+
+
+
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->where('tgl_spk  >=', $tgl_awal);
+        $this->db->where('tgl_spk <=', $tgl_ahir);
+        $query = $this->db->get();
+        return $query->result();
+    }
 }

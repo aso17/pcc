@@ -9,7 +9,7 @@
                 <div class="col-md-12">
                     <!-- general form elements -->
                     <div class="card card-primary">
-                        <div class="card-header bg-success text-light ">
+                        <div class="card-header bg-light text-dark ">
                             <h5><i class="fas fa-edit"> Form Proses Permintaan barang (SPB)</i></h5>
                         </div>
                         <!-- /.card-header -->

@@ -23,8 +23,21 @@ class ReportPlaning extends CI_Controller
         } else {
 
             $post = $this->input->post();
-            $this->model_spk->filter($post);
-            $this->template->load('template/index', 'report/dataPlaning');
+            $tgl_awal = $post['tgl_awal'];
+            $tgl_ahir = $post['tgl_ahir'];
+            $data['tgl_awal'] = $post['tgl_awal'];
+            $data['tgl_ahir'] = $post['tgl_ahir'];
+            $data['spk'] = $this->model_spk->filter($tgl_awal, $tgl_ahir);
+            $this->template->load('template/index', 'report/dataPlaning', $data);
         }
+    }
+
+    public function cetak($tgl_awal, $tgl_ahir)
+    {
+        $data['tgl_awal'] = $tgl_awal;
+        $data['tgl_ahir'] = $tgl_ahir;
+        $data['spk'] = $this->model_spk->filter($tgl_awal, $tgl_ahir);
+        $this->load->library('fungsi');
+        $this->fungsi->generate('report/dataPlaning', $data);
     }
 }
