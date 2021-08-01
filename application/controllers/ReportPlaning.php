@@ -36,6 +36,7 @@ class ReportPlaning extends CI_Controller
     {
         $data['tgl_awal'] = $tgl_awal;
         $data['tgl_ahir'] = $tgl_ahir;
+
         $data['spk'] = $this->model_spk->filter($tgl_awal, $tgl_ahir);
         $this->load->library('fungsi');
         $this->fungsi->generate('report/dataPlaning', $data);
