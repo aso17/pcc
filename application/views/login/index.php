@@ -28,7 +28,8 @@
         <!-- Outer Row -->
         <div class="row justify-content-center bg-transparant">
             <div class="col-xl-5 col-lg-12 col-md-8">
-                <div class="card o-hidden border-success mt-5 mb-5 shadow-lg my-5" style="opacity: 0.8;">
+                <div class="card o-hidden  border border border-1 border-success mt-5 mb-5 shadow-lg my-5"
+                    style="opacity: 0.8;">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row bg-light">

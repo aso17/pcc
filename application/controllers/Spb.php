@@ -58,4 +58,12 @@ class Spb extends CI_Controller
         $data['detail_spk'] = $this->model_detail_spk->detail($id_spk);
         $this->template->load('template/index', 'spb/show', $data);
     }
+
+    public function delete($id_spk)
+    {
+        $this->model_spb->delete($id_spk);
+
+        $this->session->set_flashdata('info', 'Spb Barang telah dihapus');
+        redirect('Spb/daftar', 'refresh');
+    }
 }

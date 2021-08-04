@@ -45,7 +45,7 @@
                                     <a href="<?= base_url('Spb/show/') . $sp->id_spk ?>">
                                         <button class="btn btn-success btn-sm  "><i class="fas fa-eye"></i></button>
                                     </a>
-                                    <a onclick="deleteConfirm('<?= base_url('Planing/delete/') ?>')" href="#!"
+                                    <a onclick="deleteConfirm('<?= base_url('Spb/delete/') . $sp->id_spk ?>')" href="#!"
                                         class="btn btn-success btn-sm btn-icon-split  ml-2" data-toggle="tooltip"
                                         data-placement="top" title="Delete">
                                         <span class="icon text-white-5">

@@ -105,4 +105,10 @@ class model_spb extends CI_Model
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function delete($id_spk)
+    {
+        $this->db->where('id_spk', $id_spk);
+        $this->db->delete($this->_table);
+    }
 }
