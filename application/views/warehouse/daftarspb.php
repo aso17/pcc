@@ -42,13 +42,10 @@
 
 
                                     <a href="<?= base_url('Warehouse/approve/') . $sp->id_spk ?>">
-                                        <button class="btn btn-success btn-sm float-right mr-2"><i
-                                                class="fas fa-calendar-alt"></i> Approve</button>
+                                        <button class="btn btn-success btn-sm "><i class="fas fa-calendar-alt"></i>
+                                            Approve</button>
                                     </a>
-                                    <a href="<?= base_url('Warehouse/cetak/') . $sp->id_spk ?>">
-                                        <button class="btn btn-secondary btn-sm float-right mr-2 "><i
-                                                class="fas fa-file-alt"></i> Cetak</button>
-                                    </a>
+
                                 </td>
                             </tr>
                             <?php endforeach; ?>

@@ -325,7 +325,7 @@
                         </li>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            <a class="btn btn-sm btn-danger dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
                                 <span
@@ -336,16 +336,13 @@
                                 aria-labelledby="userDropdown">
                                 <?php //foreach ($user as $us) : 
                                 ?>
-                                <a class="dropdown-item" href="<?= base_url('user/edit_pass')  ?>">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Edit Password
-                                </a>
+
                                 <?php //endforeach; 
                                 ?>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="<? base_url('Login/logout') ?>" data-toggle="modal"
-                                    data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <a class="dropdown-item text-danger" href="<? base_url('Login/logout') ?>"
+                                    data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-danger"></i>
                                     Logout
                                 </a>
                             </div>
