@@ -22,7 +22,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center" style="width: 5%;">No</th>
-                                <th class="">Nama Material</th>
+                                <th class="">Kategori Material</th>
                                 <th class="" style="width: 45%;"></th>
                             </tr>
                         </thead>
@@ -53,7 +53,7 @@
                                         <span class="icon text-white-50">
                                             <i class="fas fa-plus text-success"></i>
                                         </span>
-                                        <span class="text"> Sub material</span></a>
+                                        <span class="text">Material</span></a>
                                 </td>
                             </tr>
                             <?php endforeach; ?>

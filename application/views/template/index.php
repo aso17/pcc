@@ -178,16 +178,7 @@
                     <i class="fas fa-fw fa-align-justify"></i>
                     <span>Material</span></a>
             </li>
-            <!-- workshop material -->
-            <?php } elseif ($this->session->userdata('devisi') == 'workshop') { ?>
-            <div class="sidebar-heading">
-                Warehouse
-            </div>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Material') ?>">
-                    <i class="fas fa-fw fa-align-justify"></i>
-                    <span>Material</span></a>
-            </li>
+
             <?php } elseif ($this->session->userdata('devisi') == 'IT sport') { ?>
             <!-- Administrator -->
             <div class="sidebar-heading">
@@ -334,11 +325,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <?php //foreach ($user as $us) : 
-                                ?>
 
-                                <?php //endforeach; 
-                                ?>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="<? base_url('Login/logout') ?>"
                                     data-toggle="modal" data-target="#logoutModal">
